@@ -38,19 +38,14 @@ $(document).ready(function(){
 function hovereffect(event, $target) {
 
 	event.preventDefault();
-	console.log("Entered hovereffect function");
-
-	console.log("target var-- "+ $target);
 
 	if ($('.hidden').hasClass($target)) {
-		console.log("entered hovereffect function if");
 		hideToggle($target);
-		console.log("returned back to hovereffect function if");
 	};
 
-	console.log("returning back to mouse event function");
 	return true;
 }
+
 
 /*--- toggling the class hide ---*/
 function hideToggle($target) {
