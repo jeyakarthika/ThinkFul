@@ -1,21 +1,36 @@
+/*---------------------------------------------------------------------------------
+
+	Project Name: sRevisited
+	Project Description: A Thinkful 37Signals Clone Project Revisited
+	File Name: function.js
+	Author: Jeya Karthika
+	Author URI: http://www.freshsqueaks.com
+	Version: 2.0.0
+	
+----------------------------------------------------------------------------------*/
 
 $(document).ready(function(){
 
-	var $hoveredBox = $('section .product-box');
+	/*--- Day of the Week Animation Section ---*/
+	var today = new Date();
+	var weekdays = new Array("Sunday", "Monday", "Tuesday","Wednesday", "Thursday", "Friday", "Saturday");
+	var day = weekdays[today.getDay()];
+	$('#happyday').append("Happy "+day+".");
 	
-	$hoveredBox.mouseenter( function(e) {
-			console.log("mouseenter");
-			var $target = $(this).attr('id');
-			hovereffect(e, $target);
-			console.log("returned back to mouse enter function");
-    });
 
-    $hoveredBox.mouseleave( function(e) {
-			console.log("mouseleave");
-			var $target = $(this).attr('id');
-			hovereffect(e, $target);
-			console.log("returned back to mouse leave function");
-    });
+	/*--- Header Hover Animation Section ---*/
+	var $hoveredBox = $('section .product-box');
+
+	//When hovered on..
+	$hoveredBox.mouseenter( function(e) {
+		var $target = $(this).attr('id');
+		hovereffect(e, $target);
+	});
+	//When hovered off..
+	$hoveredBox.mouseleave( function(e) {
+		var $target = $(this).attr('id');
+		hovereffect(e, $target);
+	});
 
 });
 
@@ -39,12 +54,8 @@ function hovereffect(event, $target) {
 
 /*--- toggling the class hide ---*/
 function hideToggle($target) {
-    
-    console.log("hide toggle target var-- "+ $target);
 
-	$('.default').toggleClass("hide");
-	$('.' + $target).toggleClass("hide");
+    $('.default, .'+ $target).toggleClass("hide");
 	
-	console.log("returning back to hovereffect function if");
 	return true;
 }
