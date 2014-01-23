@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>todo - A Thinkful Project</title>
+
+		<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<meta name="description" content="Jeya Karthika's todo"/>
+		<meta name="author" content="Jeya Karthika"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Stylesheets -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/style.css"/> 
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="function/action.js"></script>
+	
+	</head>
+	<body>
+
+		<div class="container">
+			<section class="left">
+				<p><span id="do" class="count">0</span> DO</p>
+				<p><span id="done" class="count">0</span> DONE</p>
+				<p><span id="total" class="count">0</span> TOTAL</p>
+			</section>
+
+			<section class="right"> <!-- App Section -->
+				<form>
+					<input type="text" name="newItem" id="newItem" class="textBox" autocomplete="off" placeholder="Type here.." required/>
+	      			<input type="submit" class="formButton" id="add" name="add" value="+"/>
+				</form>
+				
+				<ul id="list">
+					<li>one</li>
+					<li>one</li>
+					<li>one</li>
+				</ul>
+
+			</section>
+		</div>
+
+	</body>
+</html>
