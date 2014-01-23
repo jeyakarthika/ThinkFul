@@ -128,13 +128,7 @@ ul li {
   padding: 1em; 
   width: 100%; 
   height: 10%;
-  margin-bottom: 20px; 
-  border-bottom-width: 1px; 
-  border-bottom-style: solid; 
-  border-bottom-color: #ecf0f1; 
-  border-top-style: none; 
-  border-right-style: none; 
-  border-left-style: none; 
+  border-style: none; 
   font-size: 2em;
   font-weight: 100;
   color: #282828;
@@ -142,21 +136,4 @@ ul li {
 
 input:focus {
 	outline: none;
-}
-
-.formButton {
-	position: absolute;
-	right: 2%;
-	top: 2.8%;
-	width: 6%;
-	display:inline-block;
-	border: solid 1px #282828;
-	background: #282828;
-	color: #95a5a6;
-	font-size: 3em;
-	-webkit-transition: background 1s ease-in-out;
-	-moz-transition: background 1s ease-in-out;
-	-ms-transition: background 1s ease-in-out;
-	-o-transition: background 1s ease-in-out;
-	transition: background 1s ease-in-out;
 }
