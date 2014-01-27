@@ -2,11 +2,11 @@
 <html lang="en">
 	<head>
 
-		<title>todo - A Thinkful Project</title>
+		<title>Shopping List - A Thinkful Project</title>
 
 		<!-- Meta Tags -->
 		<meta charset="utf-8"/>
-		<meta name="description" content="Jeya Karthika's todo"/>
+		<meta name="description" content="Jeya Karthika's Shopping List"/>
 		<meta name="author" content="Jeya Karthika"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 
@@ -14,7 +14,8 @@
 		<link rel="shortcut icon" href="images/favicon.ico">
 
 		<!-- Stylesheets -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles/style.css"/> 
 
 		<!-- JavaScript -->
@@ -26,9 +27,16 @@
 
 		<div class="container">
 			<section class="left">
-				<p><span id="do" class="count">0</span> DO</p>
-				<p><span id="done" class="count">0</span> DONE</p>
-				<p><span id="total" class="count">0</span> TOTAL</p>
+				<a href="index.html" class="logo"></a>
+				<h1>Shopping list</h1>
+				<hr>
+				<p class="count"><span id="do">0</span> DO</p>
+				<hr>
+				<p class="count"><span id="done">0</span> DONE</p>
+				<hr>
+				<p class="count"><span id="total">0</span> TOTAL</p>
+				<hr>
+				<p class="footer">Crafted with <span class="love"> &#9829; </span> by <a href="http://freshsqueaks.com">Jeya Karthika</a>.</p>
 			</section>
 
 			<section class="right"> <!-- App Section -->
@@ -37,11 +45,27 @@
 				</form>
 				
 				<ul id="list">
-					<li><div class="box"> </div><div class="listitem">one</div></li>
+					<li class="clearfix">
+						<span class="item">I am the first item. what if i am the longest system this system could handle and it doesnt fit in this?</span>
+						<div class="options clearfix"> 
+							<a href="index.html" class="box delete"></a>
+							<a href="index.html" class="box check"></a>
+						</div>
+					</li>
 					<li>
-						<input type='checkbox' name=" " value=""> one <a class='delete' href='#'>X</a></li>
-					<li>one</li>
-					<li>one</li>
+						<span class="item">One</span>
+						<div class="options clearfix"> 
+							<a href="index.html" class="box delete"></a>
+							<a href="index.html" class="box check"></a>
+						</div>
+					</li>
+					<li>
+						<span class="item">One</span>
+						<div class="options clearfix"> 
+							<a href="index.html" class="box delete"></a>
+							<a href="index.html" class="box check"></a>
+						</div>
+					</li>
 				</ul>
 
 			</section>

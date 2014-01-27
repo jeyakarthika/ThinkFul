@@ -1,11 +1,11 @@
 /*---------------------------------------------------------------------------------
 
 	Project Name: hotORcold
-	Project Description: A Thinkful Hot or Cold Project Revisited
+	Project Description: A Thinkful Shopping List App
 	File Name: style.css
 	Author: Jeya Karthika
 	Author URI: http://www.freshsqueaks.com
-	Version: 3.4
+	Version: 1.8
 	
 ----------------------------------------------------------------------------------*/
 
@@ -88,14 +88,7 @@ html, body, .container {
 body {
 	margin: 0 auto;
 	color: #fff;
-	font-family: 'Lato', Calibri, Arial, sans-serif;
-	background-color: #1F253D;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	font-family: 'Open Sans', sans-serif;
 }
 
 ul li {	
@@ -111,6 +104,72 @@ ul li {
 	width: 25%;
 	min-height: 100%;
 	background-color: #282828;
+}
+
+.left a {
+	text-align: center;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+
+.logo {
+	background: url('../images/logoANDoptions.png') no-repeat 0px -60px;
+	width: 120px;
+	height: 120px;
+}
+
+h1 {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	font-family: 'Rancho', cursive;
+	font-size: 2.5em;
+	padding: 0.5em 0 0;
+	top: -0.5em;	
+}
+
+.count {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	padding-bottom: 0.5em;
+	color: #11a8ab;
+	margin-bottom: solid 1px #fff;
+}
+
+#do, #done, #total {
+	color: #e64c65;
+	font-size: 3em;
+	display: block;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+.footer {
+	text-align: center;
+	position: relative;
+	width: 100%;
+	bottom: 0;
+	padding: 1em;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.footer span {
+	color: #e64c65;
+	font-size: 1.5em;
+}
+
+.footer a {
+	color: #11a8ab;
 }
 /*---------------------------------------------------------------------------------
    List App Section Styles
@@ -138,28 +197,58 @@ input:focus {
 	outline: none;
 }
 
-ul {
+/*List Styles*/
+#list {
 	position: relative;
 	list-style-type: none;
 	width: 100%;
 	height: 80%;
-	background-color: #000;
+	background-color: #fff;
 }
 
-ul#list li {
+#list li {
 	position: relative;
-	background-color: #E5C108;
-	padding: 0.5em;
-	font-size: 1.2em;
-	margin-bottom: 1px;
+	background-color: #3498db;
+	width: 100%;
+	height: 60px;
+	line-height: 3.5em;
+}
+
+#list li:nth-child(even) { 
+	background-color: #2980b9; 
+}
+
+.item {
+	position: absolute;
+	width: 100%;
+	left: 2%;
+	font-size: 1.5em;
 	color: #fff;
+	float: left;
+	vertical-align: middle;
 }
 
-ul#list-style li:before {
-	float: left;
+.box {
 	position: relative;
-	height: 100%;
-	width: 20px;
+	width: 60px;
+	height: 60px;
 	display: inline-block;
-	color: #000;
+	float: right;
+}
+
+.check {
+	background: #01FF51 url('../images/logoANDoptions.png') no-repeat 0px 0px;
+
+}
+
+.delete {
+	background: #FF5736 url('../images/logoANDoptions.png') no-repeat -60px 0px;
+}
+
+#list li:nth-child(even) .check {
+	background-color: #01C43D;
+}
+
+#list li:nth-child(even) .delete {
+	background-color: #C23025;
 }
