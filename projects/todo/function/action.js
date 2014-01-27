@@ -1,11 +1,11 @@
 /*---------------------------------------------------------------------------------
 
 	Project Name: todo
-	Project Description: A Thinkful ToDo App
+	Project Description: A Thinkful Shopping List App
 	File Name: action.js
 	Author: Jeya Karthika
 	Author URI: http://www.freshsqueaks.com
-	Version: 0.1
+	Version: 1.8
 	
 ----------------------------------------------------------------------------------*/
 
