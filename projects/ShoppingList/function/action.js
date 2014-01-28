@@ -49,11 +49,17 @@ $(document).ready(function(){
 		
 	});
 
+	/*--- Delete the item ---*/
+	$('#list li').on('click', '.delete', function(e){
+		e.preventDefault();
+    	$(this).parent().remove();
+	});
+
 	/*--- Add the new item to the list and increase the count ---*/
 	function addItem(item) {
 		doCount++;
 		updateCount();
-		$("#list").prepend('<li><span class="item">' + item + '</span><div class="options showOptions clearfix"><a href="index.html" class="box delete"></a><a href="index.html" class="box check"></a></div></li>');
+		$("#list").prepend('<li><span class="item">' + item + '</span><a href="index.html" class="options box delete"></a></li>');
 		console.log(item + " - added.");
 		setFocus();
 	}
