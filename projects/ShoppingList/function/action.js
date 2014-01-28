@@ -12,7 +12,7 @@
 $(document).ready(function(){
 
 	var doCount = 3;
-	var doneCount = 0;
+	var doneCount = 1;
 	updateCount();
 
 	setFocus();
