@@ -83,12 +83,19 @@ html, body, .container {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 body {
+	max-width: 100%;
 	margin: 0 auto;
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	margin: 0 auto;
 }
 
 ul li {	
@@ -218,6 +225,10 @@ input:focus {
 	background-color: #2980b9; 
 }
 
+.showOptions {
+	display: none;
+}
+
 .item {
 	position: absolute;
 	width: 100%;
@@ -237,18 +248,15 @@ input:focus {
 }
 
 .check {
-	background: #01FF51 url('../images/logoANDoptions.png') no-repeat 0px 0px;
+	background: url('../images/logoANDoptions.png') no-repeat 0px 0px;
 
 }
 
 .delete {
-	background: #FF5736 url('../images/logoANDoptions.png') no-repeat -60px 0px;
+	background: url('../images/logoANDoptions.png') no-repeat -60px 0px;
 }
 
-#list li:nth-child(even) .check {
-	background-color: #01C43D;
-}
-
-#list li:nth-child(even) .delete {
-	background-color: #C23025;
+.checked span.item{
+	text-decoration: line-through;
+	font-style: italic;
 }
