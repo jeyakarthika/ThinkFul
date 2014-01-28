@@ -50,8 +50,8 @@ $(document).ready(function(){
 	});
 
 	/*--- Delete the item ---*/
-	$('#list li').on('click', '.delete', function(e){
-		e.preventDefault();
+	$('#list li a').on('click', function(e1){
+		e1.preventDefault();
 		if($(this).parent().hasClass("checked")) {
 			doneCount--;
 			updateCount();
@@ -66,7 +66,7 @@ $(document).ready(function(){
 	function addItem(item) {
 		doCount++;
 		updateCount();
-		$("#list").prepend('<li><span class="item">' + item + '</span><a href="index.html" class="options box delete"></a></li>');
+		$("#list").prepend('<li><span class="item">' + item + '</span><a href="#" class="options box delete"></a></li>');
 		console.log(item + " - added.");
 		setFocus();
 	}
