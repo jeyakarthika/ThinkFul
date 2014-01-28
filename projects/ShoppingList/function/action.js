@@ -52,6 +52,13 @@ $(document).ready(function(){
 	/*--- Delete the item ---*/
 	$('#list li').on('click', '.delete', function(e){
 		e.preventDefault();
+		if($(this).parent().hasClass("checked")) {
+			doneCount--;
+			updateCount();
+		} else {
+			doCount--;
+			updateCount();
+		};
     	$(this).parent().remove();
 	});
 
