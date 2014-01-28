@@ -11,7 +11,7 @@
 
 $(document).ready(function(){
 
-	var doCount = 3;
+	var doCount = 2;
 	var doneCount = 1;
 	updateCount();
 
