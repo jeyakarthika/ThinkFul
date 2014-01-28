@@ -59,7 +59,7 @@ $(document).ready(function(){
 			doCount--;
 			updateCount();
 		};
-    	$(this).parent().remove();
+    	$(this).remove();
 	});
 
 	/*--- Add the new item to the list and increase the count ---*/
