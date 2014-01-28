@@ -11,8 +11,12 @@
 
 $(document).ready(function(){
 
-	var doCount = 0;
+	var doCount = 3;
+	var doneCount = 0;
+	updateCount();
+
 	setFocus();
+	$('#list').sortable();
 
 	$("form").submit(function(event){
 		
@@ -28,12 +32,28 @@ $(document).ready(function(){
 
 	});
 
+	/*--- Check off the items ---*/
+	$('#list').on('click', 'li', function() {
+		$(this).toggleClass("checked");
+		if($(this).hasClass("checked")) {
+			$('#list').append(this);
+			doCount--;
+			doneCount++;
+			updateCount();
+		} else {
+			$('#list').prepend(this);
+			doneCount--;
+			doCount++;
+			updateCount();
+		}
+		
+	});
+
 	/*--- Add the new item to the list and increase the count ---*/
 	function addItem(item) {
 		doCount++;
-		console.log(doCount);
-		$('#do').text(doCount);
-		$("#list").prepend("<li>" + item + "</li>");
+		updateCount();
+		$("#list").prepend('<li><span class="item">' + item + '</span><div class="options showOptions clearfix"><a href="index.html" class="box delete"></a><a href="index.html" class="box check"></a></div></li>');
 		console.log(item + " - added.");
 		setFocus();
 	}
@@ -44,6 +64,11 @@ $(document).ready(function(){
 		document.getElementById("newItem").focus();
 	}
 
-
+	/*--- Update the DO, DONE & TOTAL counts ---*/
+	function updateCount() {
+		$('#do').text(doCount);
+		$('#done').text(doneCount);
+		$('#total').text(doCount + doneCount);
+	}
 });
 
