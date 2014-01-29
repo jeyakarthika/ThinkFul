@@ -34,6 +34,7 @@ $(document).ready(function(){
 
 	/*--- Check off the items ---*/
 	$('#list').on('click', 'li', function() {
+		console.debug("Check");
 		$(this).toggleClass("checked");
 		if($(this).hasClass("checked")) {
 			$('#list').append(this);
@@ -50,8 +51,10 @@ $(document).ready(function(){
 	});
 
 	/*--- Delete the item ---*/
-	$('#list li a').on('click', function(e1){
+	$('#list li a').on('click', '.delete', function(e1){
 		e1.preventDefault();
+		e1.stopPropogation();
+		console.debug("delete");
 		if($(this).parent().hasClass("checked")) {
 			doneCount--;
 			updateCount();
