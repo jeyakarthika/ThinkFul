@@ -32,44 +32,63 @@ $(document).ready(function(){
 
 	});
 
+
 	/*--- Check off the items ---*/
-	$('#list').on('click', 'li', function() {
+	$('#list').on('click', 'li.listitem', checkoff);
+
+	/*--- Delete the item ---*/
+	$('li.listitem').on('click', 'a.delete', deleteItem);
+
+	
+
+	/*--- Delete Function ---*/
+	function deleteItem(){
+		console.debug("delete");
+		if($(this).parent().hasClass("checked")) {
+			doneCount--;
+			updateCount();
+			//$(this).parent().fadeOut('slow', function(){
+				$(this).parent().remove();
+			//});
+			console.debug("DELETE PARENT" + $(this).parent());
+			return false;
+		} else {
+			doCount--;
+			updateCount();
+			//$(this).parent().fadeOut('slow', function(){
+				$(this).parent().remove();
+			//});
+			console.debug($(this).parent());
+			return false;
+		};
+    	
+	}
+
+	/*--- Check off Function ---*/
+	function checkoff(){
 		console.debug("Check");
 		$(this).toggleClass("checked");
 		if($(this).hasClass("checked")) {
 			$('#list').append(this);
+			console.debug("CHECK" + $(this));
 			doCount--;
 			doneCount++;
 			updateCount();
 		} else {
-			$('#list').prepend(this);
+			$('#list').prepend(this);			
+			console.debug($(this));
 			doneCount--;
 			doCount++;
 			updateCount();
 		}
 		
-	});
-
-	/*--- Delete the item ---*/
-	$('#list li a').on('click', '.delete', function(e1){
-		e1.preventDefault();
-		e1.stopPropogation();
-		console.debug("delete");
-		if($(this).parent().hasClass("checked")) {
-			doneCount--;
-			updateCount();
-		} else {
-			doCount--;
-			updateCount();
-		};
-    	$(this).parent().remove();
-	});
+	}
 
 	/*--- Add the new item to the list and increase the count ---*/
 	function addItem(item) {
 		doCount++;
 		updateCount();
-		$("#list").prepend('<li><span class="item">' + item + '</span><a href="#" class="options box delete"></a></li>');
+		$("#list").prepend('<li class="listitem"><span class="item">' + item + '</span><a href="#" class="delete"></a></li>');
 		console.log(item + " - added.");
 		setFocus();
 	}
