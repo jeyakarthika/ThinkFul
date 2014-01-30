@@ -103,27 +103,38 @@ ul li {
    Left Info Section Styles
 ---------------------------------------------------------------------------------*/
 .left {
-	position: absolute;
+	position: relative;
 	left: 0;
-	top: 0;
-	bottom: 0;
 	width: 25%;
 	height: 100%;
 	background-color: #282828;
 	font-weight: 400;
+	display: inline-block;
 }
 
-.left a {
+.header, div.count-container, footer {
+	position: relative;
+	margin: 3em auto;
+	width: 100%;
+}
+
+header {
+	height: 20%;
+}
+
+header a {
 	text-align: center;
 	display: block;
 	position: relative;
 	margin: 0 auto;
+	margin-top: 2em;
 }
 
 .logo {
 	background: url('../images/logoANDoptions.png') no-repeat 10px -70px;
-	width: 120px;
-	height: 120px;
+	background-size: 100%;
+	width: 100px;
+	height: 100px;
 }
 
 h1 {
@@ -163,6 +174,7 @@ hr {
 	text-align: center;
 	position: relative;
 	width: 100%;
+	height: 15%;
 	bottom: 0;
 	padding: 1em;
 	color: #fff;
@@ -186,6 +198,7 @@ hr {
 	width: 75%;
 	height: 100%;
 	background-color: #f2f2f2;
+	display: inline-block;
 }
 
 /*Input Text Box*/
