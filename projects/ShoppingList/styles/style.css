@@ -121,7 +121,7 @@ section {
 .header, div.count-container, footer {
 	position: relative;
 	width: 100%;
-	margin: 0 auto;
+	margin: auto;
 	text-align: center;
 }
 
@@ -272,3 +272,28 @@ input:focus {
 /*---------------------------------------------------------------------------------
    Media Queries for responsiveness
 ---------------------------------------------------------------------------------*/
+/*Above style are for 320x480. 
+Now, I have to use media queries to make that responsive.*/
+
+@media only screen and (min-width : 340px) and (max-width : 477px){
+
+
+
+	footer p {
+		font-size: 1em;
+		padding: 1em 0.5em;
+	}
+
+}
+
+@media only screen and (min-height: 620px) and (max-height: 1024px){
+
+	.count {
+		font-size: 1.5em;
+	}
+
+	#do, #done, #total {
+		font-size: 2.5em;
+	}
+
+}
