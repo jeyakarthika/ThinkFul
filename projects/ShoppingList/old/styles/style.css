@@ -1,0 +1,273 @@
+/*---------------------------------------------------------------------------------
+
+	Project Name: hotORcold
+	Project Description: A Thinkful Shopping List App
+	File Name: style.css
+	Author: Jeya Karthika
+	Author URI: http://www.freshsqueaks.com
+	Version: 1.8
+	
+----------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+---------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------------------------------------------------------------------------------
+   Common Styles
+---------------------------------------------------------------------------------*/
+/*float styles*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body, .container {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	margin: 0 auto;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+}
+
+ul li {	
+	list-style: none;
+}
+
+/*---------------------------------------------------------------------------------
+   Left Info Section Styles
+---------------------------------------------------------------------------------*/
+.left {
+	position: relative;
+	left: 0;
+	width: 25%;
+	height: 100%;
+	background-color: #282828;
+	font-weight: 400;
+	display: inline-block;
+}
+
+.header, div.count-container, footer {
+	position: relative;
+	margin: 3em auto;
+	width: 100%;
+}
+
+header {
+	height: 20%;
+}
+
+header a {
+	text-align: center;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 2em;
+}
+
+.logo {
+	background: url('../images/logoANDoptions.png') no-repeat 10px -70px;
+	background-size: 100%;
+	width: 100px;
+	height: 100px;
+}
+
+h1 {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	font-family: 'Rancho', cursive;
+	font-size: 2.5em;
+	top: -0.5em;	
+}
+
+.count {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	padding-bottom: 0.5em;
+	color: #11a8ab;
+	margin-bottom: solid 1px #fff;
+}
+
+#do, #done, #total {
+	color: #e64c65;
+	font-size: 3em;
+	display: block;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+.footer {
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 15%;
+	bottom: 0;
+	padding: 1em;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.footer span {
+	color: #e64c65;
+	font-size: 1.5em;
+}
+
+.footer a {
+	color: #11a8ab;
+}
+/*---------------------------------------------------------------------------------
+   List App Section Styles
+---------------------------------------------------------------------------------*/
+.right {
+	position: absolute;
+	right: 0;
+	width: 75%;
+	height: 100%;
+	background-color: #f2f2f2;
+	display: inline-block;
+}
+
+/*Input Text Box*/
+.textBox {
+  padding: 1em; 
+  width: 100%; 
+  height: 10%;
+  border-style: none; 
+  font-size: 2em;
+  font-weight: 100;
+  color: #282828;
+}
+
+input:focus {
+	outline: none;
+}
+
+/*List Styles*/
+#list {
+	position: relative;
+	list-style-type: none;
+	width: 100%;
+	height: 80%;
+	background-color: #fff;
+}
+
+#list li {
+	position: relative;
+	background-color: #3498db;
+	width: 100%;
+	height: 60px;
+	line-height: 3.5em;
+}
+
+#list li:nth-child(even) { 
+	background-color: #2980b9; 
+}
+
+/*.showOptions {
+	display: none;
+}*/
+
+.item {
+	position: absolute;
+	width: 100%;
+	left: 2%;
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #fff;
+	float: left;
+	vertical-align: middle;
+}
+
+.delete {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	float: right;
+	background: url('../images/logoANDoptions.png') no-repeat -60px 0px;
+	cursor: pointer;
+}
+
+.checked span.item{
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+.checked {
+	background-color: #709984; 
+}
