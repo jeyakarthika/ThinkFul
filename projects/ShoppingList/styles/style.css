@@ -239,21 +239,14 @@ input:focus {
 	vertical-align: middle;
 }
 
-.box {
+.delete {
 	position: relative;
 	width: 60px;
 	height: 60px;
 	display: inline-block;
 	float: right;
-}
-
-.check {
-	background: url('../images/logoANDoptions.png') no-repeat 0px 0px;
-
-}
-
-.delete {
 	background: url('../images/logoANDoptions.png') no-repeat -60px 0px;
+	cursor: pointer;
 }
 
 .checked span.item{
