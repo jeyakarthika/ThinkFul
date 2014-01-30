@@ -11,7 +11,7 @@
 
 $(document).ready(function(){
 
-	var doCount = 2;
+	var doCount = 3;
 	var doneCount = 1;
 	updateCount();
 
@@ -36,7 +36,7 @@ $(document).ready(function(){
 	$('#list').on('click', 'li.listitem', checkoff);
 
 	/*--- Delete the item ---*/
-	$('li.listitem').on('click', 'div.delete', deleteItem);
+	$('#list').on('click', 'div.delete', deleteItem);
 	
 
 	/*--- Delete Function ---*/
