@@ -246,6 +246,7 @@ input:focus {
 	display: inline-block;
 	float: right;
 	background: url('../images/logoANDoptions.png') no-repeat -60px 0px;
+	cursor: pointer;
 }
 
 .checked span.item{
