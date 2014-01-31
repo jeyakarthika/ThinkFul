@@ -70,16 +70,16 @@ $(document).ready(function(){
 				$(this).slideDown('slow').prependTo('#list');
 			});
 			console.debug($(this));
-			doCount--;
-			doneCount++;
+			doCount++;
+			doneCount--;
 			updateCount();
 		} else {
 			$(this).slideUp('slow', function(){
 				$(this).slideDown('slow').appendTo('#list');
 			});			
 			console.debug($(this));
-			doneCount--;
-			doCount++;
+			doneCount++;
+			doCount--;
 			updateCount();
 		}
 		$(this).toggleClass("checked");
