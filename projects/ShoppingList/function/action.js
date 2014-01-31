@@ -45,7 +45,7 @@ $(document).ready(function(){
 		if($(this).parent().hasClass("checked")) {
 			doneCount--;
 			updateCount();
-			$(this).parent().fadeOut('slow', function(){
+			$(this).parent().slideUp('slow', function(){
 				$(this).remove();
 			});
 			console.debug($(this).parent());
@@ -53,7 +53,7 @@ $(document).ready(function(){
 		} else {
 			doCount--;
 			updateCount();
-			$(this).parent().fadeOut('slow', function(){
+			$(this).parent().slideUp('slow', function(){
 				$(this).remove();
 			});
 			console.debug($(this).parent());
@@ -65,20 +65,24 @@ $(document).ready(function(){
 	/*--- Check off Function ---*/
 	function checkoff(){
 		console.log("Checking Off...");
-		$(this).toggleClass("checked");
 		if($(this).hasClass("checked")) {
-			$('#list').append(this);
+			$(this).slideUp('slow', function(){
+				$(this).slideDown('slow').prependTo('#list');
+			});
 			console.debug($(this));
 			doCount--;
 			doneCount++;
 			updateCount();
 		} else {
-			$('#list').prepend(this);			
+			$(this).slideUp('slow', function(){
+				$(this).slideDown('slow').appendTo('#list');
+			});			
 			console.debug($(this));
 			doneCount--;
 			doCount++;
 			updateCount();
 		}
+		$(this).toggleClass("checked");
 		
 	}
 
@@ -86,7 +90,7 @@ $(document).ready(function(){
 	function addItem(item) {
 		doCount++;
 		updateCount();
-		$("#list").prepend('<li class="listitem"><span class="item">' + item + '</span><div class="delete"></div></li>');
+		$('<li class="listitem"><span class="item">' + item + '</span><div class="delete"></div></li>').hide().prependTo('#list').slideDown('slow');
 		console.log("You have now added " + item + "!");
 		setFocus();
 	}
