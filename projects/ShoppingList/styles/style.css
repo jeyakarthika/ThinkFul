@@ -281,7 +281,7 @@ input:focus {
    Media Queries for responsiveness
 ---------------------------------------------------------------------------------*/
 
-@media only screen and (min-width: 481px) and (max-width: 800px) and (max-height: 768px){
+@media only screen and (min-width: 481px) and (max-width: 800px){
 	h1 {
 		font-size: 2.2em;
 	}
@@ -337,6 +337,18 @@ input:focus {
 
 	footer span {
 		font-size: 1em;
+	}
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+	.count {
+		font-size: 1.2em;
+	}
+
+	#do, #done, #total {
+		font-size: 4em;
 	}
 
 }
