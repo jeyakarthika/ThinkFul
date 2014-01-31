@@ -340,15 +340,3 @@ input:focus {
 	}
 
 }
-
-@media only screen and (max-device-height : 1024px) and (orientation : portrait) {
-
-	.count {
-		font-size: 1.2em;
-	}
-
-	#do, #done, #total {
-		font-size: 4em;
-	}
-
-}
