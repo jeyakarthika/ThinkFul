@@ -128,6 +128,7 @@ section {
 
 header {
 	height: 20%;
+	margin: 1em 0 0.5em;
 }
 
 header .logo {
@@ -145,7 +146,7 @@ h1 {
 	top: 0.5em;
 	width: 100%;
 	font-family: 'Rancho', cursive;
-	font-size: 1.5em;
+	font-size: 3em;
 	text-align: center;
 }
 
@@ -162,7 +163,7 @@ h1 {
 
 #do, #done, #total {
 	color: #e64c65;
-	font-size: 2.2em;
+	font-size: 4em;
 	display: block;
 }
 
@@ -178,28 +179,28 @@ hr {
 
 /*footer styles*/
 footer {
-	position: relative;
-	width: 100%;
 	height: 15%;
+	margin: 1em 0;
+	text-align: center;
 }
 
 footer p {
-	font-size: 0.88em;
+	font-size: 1.2em;
 	padding: 1em 0.2em;
 	line-height: 1.2em;
 	font-weight: 300;
 	color: #fff;
-	text-align: center;
 	margin: 0 auto;
 }
 
 footer span {
 	color: #e64c65;
-	font-size: 1em;
+	font-size: 1.5em;
 }
 
 footer a {
 	color: #11a8ab;
+	display: block;
 }
 /*---------------------------------------------------------------------------------
    List App Section Styles
@@ -216,9 +217,8 @@ footer a {
 }
 
 input {
-	font-family: 'Open Sans', sans-serif;
-	font-style: italic;	
-	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;	
+	font-weight: 400;
 }
 
 input:focus {
@@ -280,28 +280,87 @@ input:focus {
 /*---------------------------------------------------------------------------------
    Media Queries for responsiveness
 ---------------------------------------------------------------------------------*/
-/*Above style are for 320x480. 
-Now, I have to use media queries to make that responsive.*/
 
-@media only screen and (min-width : 340px) and (max-width : 477px){
-
-
-
-	footer p {
-		font-size: 1em;
-		padding: 1em 0.5em;
+/*@media only screen and (min-width : 340px) and (max-width : 645px){
+	header {
+		margin: 0.5em;
 	}
 
-}
-
-@media only screen and (min-height: 620px) and (max-height: 1024px){
+	.count-container {
+		padding: 2em 0.2em;
+	}
 
 	.count {
-		font-size: 1.5em;
+		font-size: 1.3em;
+	}
+
+	footer {
+		padding: 1em 0.5em;
+		font-size: 1em;
+	}
+
+	footer p a {
+		display: block;
+	}
+
+}*/
+
+@media only screen and (max-width: 880px) and (max-height: 800px){
+	h1 {
+		font-size: 2.2em;
+	}
+
+	.count {
+		font-size: 1.2em;
 	}
 
 	#do, #done, #total {
-		font-size: 2.5em;
+		font-size: 3.5em;
+	}
+
+	footer {
+		margin: 0.2em 0;
+	}
+
+	footer p {
+		font-size: 1em;
+		padding: 0.5em;
+	}
+
+	footer span {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (max-width: 320px) and (max-height: 480px){
+
+	header {
+		margin: 0.2em;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	.count {
+		font-size: 1em;
+	}
+
+	#do, #done, #total {
+		font-size: 3em;
+	}
+
+	footer {
+		margin: 0.5em 0;
+	}
+
+	footer p {
+		font-size: 0.8em;
+		padding: 1em 0.5em;
+	}
+
+	footer span {
+		font-size: 1em;
 	}
 
 }
