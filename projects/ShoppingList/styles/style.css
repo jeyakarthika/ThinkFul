@@ -83,6 +83,7 @@ html {
 	width: 100%;
 	height: 100%;
 	background-color: #f2f2f2;
+	overflow: hidden;
 }
 
 body {
@@ -214,6 +215,12 @@ footer a {
   color: #282828;
 }
 
+input {
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;	
+	font-weight: 300;
+}
+
 input:focus {
 	outline: none;
 }
@@ -230,7 +237,7 @@ input:focus {
 	position: relative;
 	background-color: #3498db;
 	width: 100%;
-	height: 15%;
+	height: 60px;
 }
 
 #list li:nth-child(even) { 
@@ -242,10 +249,11 @@ input:focus {
 	position: absolute;
 	left: 0;
 	width: 78%;
-	margin: 0 auto;
-	font-size: 1em;
+	height: 60px;
+	font-size: 1.2em;
 	color: #fff;
-	padding: 1em 0 1em 0.8em;
+	padding-left: 0.8em;
+	line-height: 3em;
 }
 
 /*Delete icon using div*/
