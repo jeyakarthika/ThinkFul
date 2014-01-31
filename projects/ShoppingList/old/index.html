@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>Shopping List - A Thinkful Project</title>
+
+		<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<meta name="description" content="Jeya Karthika's Shopping List"/>
+		<meta name="author" content="Jeya Karthika"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Stylesheets -->
+		<link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/style.css"/> 
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="function/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="function/jquery-ui.js"></script>
+		<script type="text/javascript" src="function/action.js"></script>
+	
+	</head>
+	<body>
+
+		<div class="container">
+			<section class="left">
+				<header>
+					<a href="index.html" class="logo"></a>
+					<h1>Shopping list</h1>
+				</header>
+				<div class="count-container">
+					<hr>
+					<p class="count"><span id="do">0</span> DO</p>
+					<hr>
+					<p class="count"><span id="done">0</span> DONE</p>
+					<hr>
+					<p class="count"><span id="total">0</span> TOTAL</p>
+					<hr>
+				</div>
+				<footer>
+					<p class="footer">Crafted with <span class="love"> &#9829; </span> by <a href="http://freshsqueaks.com">Jeya Karthika.</a></p>
+				</footer>
+			</section>
+
+			<section class="right"> <!-- App Section -->
+				<form>
+					<input type="text" name="newItem" id="newItem" class="textBox" autocomplete="off" placeholder="Type here.." required/>
+				</form>
+				
+				<ul id="list">
+					<li class="listitem">
+						<span class="item">Click or Tap to check off an item.</span>
+						<div class="delete"></div>
+					</li>
+					<li class="listitem checked">
+						<span class="item">I 'm a checked off item.</span>
+						<div class="delete"></div>
+					</li>
+					<li class="listitem">
+						<span class="item">Click or Tap, hold and drag to Sort items.</span>
+						<div class="delete"></div>
+					</li>
+					<li class="listitem">
+						<span class="item">Click or Tap the cross mark to delete.</span>
+						<div class="delete"></div>
+					</li>
+				</ul>
+
+			</section>
+		</div>
+
+	</body>
+</html>
