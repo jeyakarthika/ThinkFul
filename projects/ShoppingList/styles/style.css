@@ -340,15 +340,3 @@ input:focus {
 	}
 
 }
-
-@media only screen and (max-height : 1024px) {
-
-	.count {
-		font-size: 1.2em;
-	}
-
-	#do, #done, #total {
-		font-size: 4em;
-	}
-
-}
