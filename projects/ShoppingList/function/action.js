@@ -36,7 +36,7 @@ $(document).ready(function(){
 	$('#list').on('click', 'li.listitem', checkoff);
 
 	/*--- Delete the item ---*/
-	$('li.listitem').on('click', 'div.delete', deleteItem);
+	$('#list').on('click', 'div.delete', deleteItem);
 	
 
 	/*--- Delete Function ---*/
