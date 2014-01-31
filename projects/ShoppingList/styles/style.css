@@ -341,7 +341,7 @@ input:focus {
 
 }
 
-@media only screen and (max-device-height : 1024px) and (orientation : portrait) {
+@media only screen and (max-height : 1024px) {
 
 	.count {
 		font-size: 1.2em;
