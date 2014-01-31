@@ -86,7 +86,7 @@ $(document).ready(function(){
 	function addItem(item) {
 		doCount++;
 		updateCount();
-		$("#list").prepend('<li class="listitem"><span class="item">' + item + '</span><div class="delete"></div></li>');
+		$('<li class="listitem"><span class="item">' + item + '</span><div class="delete"></div></li>').fadeIn('slow').prependTo('#list');
 		console.log("You have now added " + item + "!");
 		setFocus();
 	}
