@@ -65,20 +65,24 @@ $(document).ready(function(){
 	/*--- Check off Function ---*/
 	function checkoff(){
 		console.log("Checking Off...");
-		$(this).toggleClass("checked");
 		if($(this).hasClass("checked")) {
-			$('#list').append(this);
+			$(this).fadeOut('slow', function(){
+				$(this).fadeIn('slow').prependTo('#list');
+			});
 			console.debug($(this));
 			doCount--;
 			doneCount++;
 			updateCount();
 		} else {
-			$('#list').prepend(this);			
+			$(this).fadeOut('slow', function(){
+				$(this).fadeIn('slow').appendTo('#list');
+			});			
 			console.debug($(this));
 			doneCount--;
 			doCount++;
 			updateCount();
 		}
+		$(this).toggleClass("checked");
 		
 	}
 
