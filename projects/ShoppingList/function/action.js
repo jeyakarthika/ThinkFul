@@ -5,7 +5,7 @@
 	File Name: action.js
 	Author: Jeya Karthika
 	Author URI: http://www.freshsqueaks.com
-	Version: 1.8
+	Version: 2.0
 	
 ----------------------------------------------------------------------------------*/
 
