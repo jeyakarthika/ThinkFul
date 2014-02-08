@@ -1,6 +1,6 @@
 /*---------------------------------------------------------------------------------
 
-	Project Name: Colour that Name
+	Project Name: Name that Colour
 	Project Description: A Thinkful Quiz App
 	File Name: style.css
 	Author: Jeya Karthika
@@ -82,6 +82,8 @@ table {
 html {
 	width: 100%;
 	height: 100%;
+	background-color: #f2f2f2;
+	overflow: hidden;
 }
 
 body {
@@ -92,14 +94,205 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+section {
+	position: absolute;
+	height: 100%;
+}
+
+.left {
+	width: 25%;
+	top: 0;
+	left: 0;
+	background-color: #282828;
+	font-weight: 400;
+	color: #fff;
+}
+
+.right {
+	width: 75%;
+	top: 0;
+	right: 0;
+	font-weight: 300;
+}
 
 /*---------------------------------------------------------------------------------
-   Section Styles
+   Info Section Styles
 ---------------------------------------------------------------------------------*/
 
+.header, div.results-container, footer {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+header {
+	height: 20%;
+	margin: 1em 0 0.5em;
+}
+
+header .logo {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+
+h1 {
+	position: relative;
+	width: 100%;
+	font-family: 'Rancho', cursive;
+	font-size: 3em;
+	text-align: center;
+}
+
+.results-container {
+	height: 60%;
+	padding: 2.8em 0.2em 2.5em; 
+}
+
+.count {
+	text-align: center;
+	font-size: 1.2em;
+	color: #11a8ab;
+}
+
+#do, #done, #total {
+	color: #e64c65;
+	font-size: 4em;
+	display: block;
+}
+
+/*Horizontal rule styling based on Chris Coyiers article*/
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+/*footer styles*/
+footer {
+	height: 15%;
+	margin: 1em 0;
+	text-align: center;
+}
+
+footer p {
+	font-size: 1.2em;
+	padding: 1em 0.2em;
+	line-height: 1.2em;
+	font-weight: 300;
+	color: #fff;
+	margin: 0 auto;
+}
+
+footer span {
+	color: #e64c65;
+	font-size: 1.5em;
+}
+
+footer a {
+	color: #11a8ab;
+	display: block;
+}
+/*---------------------------------------------------------------------------------
+   Quiz App Section Styles
+---------------------------------------------------------------------------------*/
+h2 {
+	position: relative;
+	padding: 1em;
+	font-size: 4em;
+	text-align: center;
+	width: 100%;
+}
+/*List Styles*/
+#choices {
+	position: relative;
+	list-style-type: none;
+	width: 100%;
+	height: 80%;
+}
+
+#choices li {
+	position: relative;
+	background-color: #3498db;
+	width: 100%;
+	height: 20%;
+}
+
+#choices li:nth-child(even) { 
+	background-color: #2980b9; 
+}
 
 
 /*---------------------------------------------------------------------------------
    Media Queries for responsiveness
 ---------------------------------------------------------------------------------*/
 
+@media only screen and (min-width: 481px) and (max-width: 800px){
+	h1 {
+		font-size: 2.2em;
+	}
+
+	.count {
+		font-size: 1.2em;
+	}
+
+	#do, #done, #total {
+		font-size: 3.5em;
+	}
+
+	footer {
+		margin: 0.2em 0;
+	}
+
+	footer p {
+		font-size: 1em;
+		padding: 0.5em;
+	}
+
+	footer span {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px){
+
+	header {
+		margin: 0.2em;
+	}
+
+	.logo img {
+		width: 75px;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	.count {
+		font-size: 1em;
+	}
+
+	#do, #done, #total {
+		font-size: 3em;
+	}
+
+	footer {
+		margin: 0.5em 0;
+	}
+
+	footer p {
+		font-size: 0.8em;
+		padding: 1em 0.5em;
+	}
+
+	footer span {
+		font-size: 1em;
+	}
+
+}
