@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>Name that Colour - A Thinkful Project</title>
+
+		<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<meta name="description" content="Jeya Karthika's Quiz App"/>
+		<meta name="author" content="Jeya Karthika"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Stylesheets -->
+		<link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/style.css"/> 
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="function/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="function/jquery-ui.js"></script>
+		<script type="text/javascript" src="function/action.js"></script>
+	
+	</head>
+	<body>
+		<section class="left">
+			<header>
+				<a href="index.html" class="logo"><img src="images/logo.png"></a>
+				<h1>Name that Colour</h1>
+			</header>
+			<div class="results-container">
+				<hr>
+				<p class="count"><span id="do">0</span> NAMED</p>
+				<hr>
+				<p class="count"><span id="done">0</span> MISSED</p>
+				<hr>
+				<p class="count"><span id="total">0</span> TOTAL</p>
+				<hr>
+			</div>
+			<footer>
+				<p>Crafted with <span class="love"> &#9829; </span> by <a href="http://freshsqueaks.com">Jeya Karthika.</a></p>
+			</footer>
+		</section>
+
+		<section class="right"> <!-- App Section -->
+			<h2 id="question">Color Name</h2>
+			
+			<ul id="choices">
+				<li class="choice"></li>
+				<li class="choice"></li>
+				<li class="choice"></li>
+				<li class="choice"></li>
+				<li class="choice"></li>
+			</ul>
+		</section>
+	</body>
+</html>
