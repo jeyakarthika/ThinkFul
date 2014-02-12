@@ -80,12 +80,12 @@ $(document).ready(function(){
 
 	function newQuestion() {
 		if (questionNumber < 10) {
-			$question.text(colour[questionNumber].name);
-			$c1.addClass(colour[questionNumber].choices[0]);
-			$c2.addClass(colour[questionNumber].choices[1]);
-			$c3.addClass(colour[questionNumber].choices[2]);
-			$c4.addClass(colour[questionNumber].choices[3]);
-			$c5.addClass(colour[questionNumber].choices[4]);
+			$question.fadeIn('slow').text(colour[questionNumber].name);
+			$c1.fadeIn('slow').addClass(colour[questionNumber].choices[0]);
+			$c2.fadeIn('slow').addClass(colour[questionNumber].choices[1]);
+			$c3.fadeIn('slow').addClass(colour[questionNumber].choices[2]);
+			$c4.fadeIn('slow').addClass(colour[questionNumber].choices[3]);
+			$c5.fadeIn('slow').addClass(colour[questionNumber].choices[4]);
 			answer = colour[questionNumber].answer;
 			questionNumber++;
 		} else {
@@ -105,7 +105,8 @@ $(document).ready(function(){
 			updateCount(doneCount++);
 		};
 		$(this).text('');
-		$('ul li').removeClass();
+		$question.fadeOut('slow').text('');
+		$('ul li').fadeOut('slow').removeClass();
 		newQuestion();
 	});
 
