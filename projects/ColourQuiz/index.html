@@ -16,7 +16,7 @@
 		<!-- Stylesheets -->
 		<link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="styles/style.css"/> 
+		<link rel="stylesheet" href="styles/style.css"/>
 
 		<!-- JavaScript -->
 		<script type="text/javascript" src="function/jquery-1.10.2.min.js"></script>
@@ -25,7 +25,39 @@
 	
 	</head>
 	<body>
-		<section class="left">
+
+		<!-- Modal Information Box -->
+		<section class="overlay" id="modal">
+			<div class="content">
+				<h3>Welcome!</h3>
+				<div>
+					<p>This is a Hot or Cold Number Guessing Game. It is quite similar to the Huckle, Buckle, Beanstalk game. The game goes like this,</p>
+					<ul>
+						<li>1. I pick a <strong>ramdom secret number</strong> between 1 to 100 and keep it hidden.</li>
+						<li>2. You need to <strong>guess</strong> until you can find the hidden secret number.</li>
+						<li>3. You will <strong>get feedback</strong> on how hot or cold your guess is.</li>
+					</ul>
+					<p>So, Are you ready?</p>
+					<a class="close" href="#">Got It!</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="left"> <!-- App Section -->
+			<div id="question-container">
+				<h2 id="question">Color Question Name</h2>
+			</div>
+			
+			<ul id="choices">
+				<li id="choice1"></li>
+				<li id="choice2"></li>
+				<li id="choice3"></li>
+				<li id="choice4"></li>
+				<li id="choice5"></li>
+			</ul>
+		</section>
+		
+		<section class="right">
 			<header>
 				<a href="index.html" class="logo"><img src="images/logo.png"></a>
 				<h1>Name that Colour</h1>
@@ -44,16 +76,5 @@
 			</footer>
 		</section>
 
-		<section class="right"> <!-- App Section -->
-			<h2 id="question">Color Name</h2>
-			
-			<ul id="choices">
-				<li class="choice"></li>
-				<li class="choice"></li>
-				<li class="choice"></li>
-				<li class="choice"></li>
-				<li class="choice"></li>
-			</ul>
-		</section>
 	</body>
 </html>
