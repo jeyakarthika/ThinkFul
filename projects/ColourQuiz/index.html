@@ -13,64 +13,42 @@
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="images/favicon.ico">
 
-		<!-- Stylesheets -->
+		<!-- Stylesheets 
 		<link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>-->
 		<link rel="stylesheet" href="styles/style.css"/>
 
 		<!-- JavaScript -->
 		<script type="text/javascript" src="function/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="function/jquery-ui.js"></script>
 		<script type="text/javascript" src="function/action.js"></script>
 	
 	</head>
 	<body>
-
 		<!-- Modal Information Box -->
-		<section class="overlay" id="modal">
+		<section class="welcome overlay" id="modal">
 			<div class="content">
-				<h3>Name that Colour!</h3>
-				<div>
-					<p>Hello there! Do you think you know the difference between Magenta and Fuchsia? Well, You are about to find out. I have picked 10 HTML/CSS colour names as questions. Each question is given 5 shades from the same hue. All you need to do is click the colour represented by the colour name.</p>
+				<header>
+					<a href="index.html" class="logo"><img src="images/logo.png"></a>
+					<h1>Name that Colour</h1>
+				</header>
+				<hr>
+				<div class="text">
+					<p>Hello there!</p> 
+
+					<p>Do you think you know the difference between Magenta and Fuchsia? Well, You are about to find out.</p> 
+
+					<p>I have picked 10 HTML/CSS colour names as questions. Each question is given 5 shades from the same hue. All you need to do is click the colour corresponding to the colour name.</p>
 					
 					<p>So, Are you ready?</p>
 
-					<p><a class="close" href="#">Got It!</a></p>
+					<p><a class="game" href="#">Start Game</a></p>
 				</div>
-			</div>
-		</section>
+				<hr>
+				<footer>
+					<p>Crafted with <span class="love"> &#9829; </span> by <a href="http://freshsqueaks.com">Jeya Karthika.</a></p>
+				</footer>
 
-		<section class="left"> <!-- App Section -->
-			<div id="question-container">
-				<h2 id="question">Color Question Name</h2>
 			</div>
-			
-			<ul id="choices">
-				<li id="choice1"></li>
-				<li id="choice2"></li>
-				<li id="choice3"></li>
-				<li id="choice4"></li>
-				<li id="choice5"></li>
-			</ul>
-		</section>
-		
-		<section class="right">
-			<header>
-				<a href="index.html" class="logo"><img src="images/logo.png"></a>
-				<h1>Name that Colour</h1>
-			</header>
-			<div class="results-container">
-				<hr>
-				<p class="count"><span id="do">0</span> NAMED</p>
-				<hr>
-				<p class="count"><span id="done">0</span> MISSED</p>
-				<hr>
-				<p class="count"><span id="total">0</span> TOTAL</p>
-				<hr>
-			</div>
-			<footer>
-				<p>Crafted with <span class="love"> &#9829; </span> by <a href="http://freshsqueaks.com">Jeya Karthika.</a></p>
-			</footer>
 		</section>
 
 	</body>

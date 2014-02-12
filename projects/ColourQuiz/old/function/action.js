@@ -53,9 +53,9 @@ $(document).ready(function(){
 			answer: 'Chocolate' 
 		},
 		{ 
-			name: 'OldLace', 
-			choices: ['Seashell', 'Beige', 'OldLace', 'FloralWhite', 'Ivory'], 
-			answer: 'OldLace' 
+			name: 'Ivory', 
+			choices: ['Ivory', 'AntiqueWhite', 'Linen', 'LavenderBlush', 'MistyRose'], 
+			answer: 'Ivory' 
 		},
 		{ 
 			name: 'Silver', 
