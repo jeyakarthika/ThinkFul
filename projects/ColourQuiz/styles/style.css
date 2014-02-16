@@ -95,7 +95,7 @@ body {
 }
 
 /*---------------------------------------------------------------------------------
-   Welcome Overlay Section Styles
+   Overlay Section Styles
 ---------------------------------------------------------------------------------*/
 
 .overlay {
@@ -108,15 +108,18 @@ body {
 	left: 0;
 	margin: 0;
 	z-index: 1000;
-	display: none;
 	overflow: hidden;
 	text-align: center;
 }
 
+/*---------------------------------------------------------------------------------
+   Welcome Overlay Section Styles
+---------------------------------------------------------------------------------*/
+
 .content {
 	color: #fff;
 	position: relative;
-	height: 90%;
+	height: 100%;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -124,8 +127,8 @@ body {
 .header, div.text, footer {
 	position: relative;
 	padding: 0.5em;
-	width: 80%;
-	margin: 0.5em auto;
+	width: 50%;
+	margin: 0 auto;
 }
 
 header .logo {
@@ -134,16 +137,18 @@ header .logo {
 	display: block;
 	text-decoration: none;
 	text-align: center;
-	padding: 1em;
+	padding-top: 1em;
 }
 
 h1 {
 	position: relative;
+	color: #282828;
 	width: 100%;
-	font-family: 'Rancho', cursive;
-	font-size: 3em;
+	font-family: 'Oregano', cursive;
+	font-size: 4em;
 	text-align: center;
-	padding: 0.3em;
+	padding: 0 0 0.3em;
+  	text-shadow: #11a8ab -1px 0, #11a8ab 0 -1px, #11a8ab 0 1px, #11a8ab -1px -1px;
 }
 
 /*Horizontal rule styling based on Chris Coyiers article*/
@@ -156,31 +161,44 @@ hr {
     background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
 }
 
-.text p {
-	line-height: 2em;
+.text > p {
 	text-align: justify;
+	line-height: 1.5em;
+	color: #11a8ab;
 }
 
-.text a {
+.game-container {
+	position: relative;
+	width: 100%;
+	padding: 1em 0;
+	left: 25%;
+}
+
+.game {
 	text-align: center;
 	text-decoration: none;
 	font-size: 1em;
-	background: #e74c3c;
-	color: #fff;
-	padding: 0.5em 2em;
-	margin: 0.5em;
+	background: #11a8ab;
+	padding: 0.5em 5em;
 	border-radius: 3px;
-}	
+	border: 1px solid #11a8ab;
+	background-color: #282828;
+	color: #11a8ab;
+}
+
+.game:hover {
+	background-color: #11a8ab;
+	color: #282828;
+}
 
 /*footer styles*/
 footer {
-	margin: 1em 0;
 	text-align: center;
 }
 
 footer p {
-	font-size: 1.2em;
-	padding: 1em 0.2em;
+	font-size: 1em;
+	padding: 0 0 0.2em;
 	line-height: 1.2em;
 	font-weight: 300;
 	color: #fff;
@@ -194,5 +212,675 @@ footer span {
 
 footer a {
 	color: #11a8ab;
-	display: block;
+}
+
+/*---------------------------------------------------------------------------------
+   Quiz Section
+---------------------------------------------------------------------------------*/
+
+.left {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	font-weight: 300;
+}
+
+#question-container {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 20%;
+}
+
+h2 {
+	font-size: 4em; 
+	vertical-align: middle;
+	line-height: 2em;
+}
+
+/*List Styles*/
+#choices {
+	position: relative;
+	list-style-type: none;
+	width: 100%;
+	height: 80%;
+}
+
+#choices li {
+	position: relative;
+	width: 100%;
+	height: 20%;
+	cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------
+   Results Overlay
+---------------------------------------------------------------------------------*/
+.result {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.blocks {
+	position: relative;
+	width: 100%;
+	height: 50%;
+	top: 2%;
+	left: 0;
+}
+
+.blocks li {
+	position: relative;
+	width: 20%;
+	height: 25%;
+	display: inline-block;
+	border: 3px solid #121212;
+	margin: 2%;
+}
+
+.message {
+	position: relative;
+	width: 100%;
+	height: 50%;
+	border: 0;
+	margin: 0 auto;
+}
+
+.message > p {
+	position: relative;
+	top: 40%;
+	float: left;
+	display: inline-block;
+}
+
+.message > p:nth-child(1) {
+	width: 100%;
+	font-size: 5em;
+	color: #11a8ab;
+	top: 25%;
+	padding: 0.3em;
+}
+
+.message > p:nth-child(2), .message > p:nth-child(3) {
+	width: 50%;
+	top: 30%;
+	font-size: 3em;
+	color: #282828;
+	border: 1px solid #282828;
+	padding: 0.3em;
+	background-color: #11a8ab;
+}
+
+.message > p:nth-child(3) {
+	cursor: pointer;
+}
+
+.message > p:nth-child(3):hover {
+	cursor: pointer;
+	border: 1px solid #11a8ab;
+	background-color: #282828;
+	color: #11a8ab;
+}
+/*---------------------------------------------------------------------------------
+   Colour Name Styles
+---------------------------------------------------------------------------------*/
+.IndianRed {
+	background-color: IndianRed;
+}
+
+.LightCoral {
+	background-color: LightCoral;
+}
+
+.Salmon {
+	background-color: Salmon;
+}
+
+.DarkSalmon {
+	background-color: DarkSalmon;
+}
+
+.LightSalmon {
+	background-color: LightSalmon;
+}
+
+.Crimson {
+	background-color: Crimson;
+}
+
+.Red {
+	background-color: Red;
+}
+
+.FireBrick {
+	background-color: FireBrick;
+}
+
+.DarkRed {
+	background-color: DarkRed;
+}
+
+.Pink {
+	background-color: Pink;
+}
+
+.LightPink {
+	background-color: LightPink;
+}
+
+.HotPink {
+	background-color: HotPink;
+}
+
+.DeepPink {
+	background-color: DeepPink;
+}
+
+.MediumVioletRed {
+	background-color: MediumVioletRed;
+}
+
+.PaleVioletRed {
+	background-color: PaleVioletRed;
+}
+
+.Coral {
+	background-color: Coral;
+}
+
+.Tomato {
+	background-color: Tomato;
+}
+
+.OrangeRed {
+	background-color: OrangeRed;
+}
+
+.DarkOrange {
+	background-color: DarkOrange;
+}
+
+.Orange {
+	background-color: Orange;
+}
+
+.Gold {
+	background-color: Gold;
+}
+
+.Yellow {
+	background-color: Yellow;
+}
+
+.LightYellow {
+	background-color: LightYellow;
+}
+
+.LemonChiffon {
+	background-color: LemonChiffon;
+}
+
+.LightGoldenrodYellow {
+	background-color: LightGoldenrodYellow;
+}
+
+.PapayaWhip {
+	background-color: PapayaWhip;
+}
+
+.Moccasin {
+	background-color: Moccasin;
+}
+
+.PeachPuff {
+	background-color: PeachPuff;
+}
+
+.PaleGoldenrod {
+	background-color: PaleGoldenrod;
+}
+
+.Khaki {
+	background-color: Khaki;
+}
+
+.DarkKhaki {
+	background-color: DarkKhaki;
+}
+
+.Lavender {
+	background-color: Lavender;
+}
+
+.Thistle {
+	background-color: Thistle;
+}
+
+.Plum {
+	background-color: Plum;
+}
+
+.Violet {
+	background-color: Violet;
+}
+
+.Orchid {
+	background-color: Orchid;
+}
+
+.Fuchsia {
+	background-color: Fuchsia;
+}
+
+.Magenta {
+	background-color: Magenta;
+}
+
+.MediumOrchid {
+	background-color: MediumOrchid;
+}
+
+.MediumPurple {
+	background-color: MediumPurple;
+}
+
+.DarkViolet {
+	background-color: DarkViolet;
+}
+
+.DarkOrchid {
+	background-color: DarkOrchid;
+}
+
+.DarkMagenta {
+	background-color: DarkMagenta;
+}
+
+.Purple {
+	background-color: Purple;
+}
+
+.Indigo {
+	background-color: Indigo;
+}
+
+.SlateBlue {
+	background-color: SlateBlue;
+}
+
+.DarkSlateBlue {
+	background-color: DarkSlateBlue;
+}
+
+.MediumSlateBlue {
+	background-color: MediumSlateBlue;
+}
+
+.GreenYellow {
+	background-color: GreenYellow;
+}
+
+.Chartreuse {
+	background-color: Chartreuse;
+}
+
+.LawnGreen {
+	background-color: LawnGreen;
+}
+
+.Lime {
+	background-color: Lime;
+}
+
+.LimeGreen {
+	background-color: LimeGreen;
+}
+
+.PaleGreen {
+	background-color: PaleGreen;
+}
+
+.LightGreen {
+	background-color: LightGreen;
+}
+
+.MediumSpringGreen {
+	background-color: MediumSpringGreen;
+}
+
+.SpringGreen {
+	background-color: SpringGreen;
+}
+
+.MediumSeaGreen {
+	background-color: MediumSeaGreen;
+}
+
+.SeaGreen {
+	background-color: SeaGreen;
+}
+
+.ForestGreen {
+	background-color: ForestGreen;
+}
+
+.Green {
+	background-color: Green;
+}
+
+.DarkGreen {
+	background-color: DarkGreen;
+}
+
+.YellowGreen {
+	background-color: YellowGreen;
+}
+
+.OliveDrab {
+	background-color: OliveDrab;
+}
+
+.Olive {
+	background-color: Olive;
+}
+
+.DarkOliveGreen {
+	background-color: DarkOliveGreen;
+}
+
+.DarkSeaGreen {
+	background-color: DarkSeaGreen;
+}
+
+.LightSeaGreen {
+	background-color: LightSeaGreen;
+}
+
+.DarkCyan {
+	background-color: DarkCyan;
+}
+
+.Teal {
+	background-color: Teal;
+}
+
+.MediumAquamarine {
+	background-color: MediumAquamarine;
+}
+
+.Aqua {
+	background-color: Aqua;
+}
+
+.Cyan {
+	background-color: Cyan;
+}
+
+.LightCyan {
+	background-color: LightCyan;
+}
+
+.PaleTurquoise {
+	background-color: PaleTurquoise;
+}
+
+.Aquamarine {
+	background-color: Aquamarine;
+}
+
+.Turquoise {
+	background-color: Turquoise;
+}
+
+.MediumTurquoise {
+	background-color: MediumTurquoise;
+}
+
+.DarkTurquoise {
+	background-color: DarkTurquoise;
+}
+
+.CadetBlue {
+	background-color: CadetBlue;
+}
+
+.SteelBlue {
+	background-color: SteelBlue;
+}
+
+.LightSteelBlue {
+	background-color: LightSteelBlue;
+}
+
+.PowderBlue {
+	background-color: PowderBlue;
+}
+
+.LightBlue {
+	background-color: LightBlue;
+}
+
+.SkyBlue {
+	background-color: SkyBlue;
+}
+
+.LightSkyBlue {
+	background-color: LightSkyBlue;
+}
+
+.DeepSkyBlue {
+	background-color: DeepSkyBlue;
+}
+
+.DodgerBlue {
+	background-color: DodgerBlue;
+}
+
+.CornflowerBlue {
+	background-color: CornflowerBlue;
+}
+
+.BlueViolet {
+	background-color: BlueViolet;
+}
+
+.RoyalBlue {
+	background-color: RoyalBlue;
+}
+
+.Blue {
+	background-color: Blue;
+}
+
+.MediumBlue {
+	background-color: MediumBlue;
+}
+
+.DarkBlue {
+	background-color: DarkBlue;
+}
+
+.Navy {
+	background-color: Navy;
+}
+
+.MidnightBlue {
+	background-color: MidnightBlue;
+}
+
+.Cornsilk {
+	background-color: Cornsilk;
+}
+
+.BlanchedAlmond {
+	background-color: BlanchedAlmond;
+}
+
+.Bisque {
+	background-color: Bisque;
+}
+
+.NavajoWhite {
+	background-color: NavajoWhite;
+}
+
+.Wheat {
+	background-color: Wheat;
+}
+
+.BurlyWood {
+	background-color: BurlyWood;
+}
+
+.Tan {
+	background-color: Tan;
+}
+
+.RosyBrown {
+	background-color: RosyBrown;
+}
+
+.SandyBrown {
+	background-color: SandyBrown;
+}
+
+.Goldenrod {
+	background-color: Goldenrod;
+}
+
+.DarkGoldenrod {
+	background-color: DarkGoldenrod;
+}
+
+.Peru {
+	background-color: Peru;
+}
+
+.Chocolate {
+	background-color: Chocolate;
+}
+
+.SaddleBrown {
+	background-color: SaddleBrown;
+}
+
+.Sienna {
+	background-color: Sienna;
+}
+
+.Brown {
+	background-color: Brown;
+}
+
+.Maroon {
+	background-color: Maroon;
+}
+
+.White {
+	background-color: White;
+}
+
+.Snow {
+	background-color: Snow;
+}
+
+.Honeydew {
+	background-color: Honeydew;
+}
+
+.MintCream {
+	background-color: MintCream;
+}
+
+.Azure {
+	background-color: Azure;
+}
+
+.AliceBlue {
+	background-color: AliceBlue;
+}
+
+.GhostWhite {
+	background-color: GhostWhite;
+}
+
+.WhiteSmoke {
+	background-color: WhiteSmoke;
+}
+
+.Seashell {
+	background-color: Seashell;
+}
+
+.Beige {
+	background-color: Beige;
+}
+
+.OldLace {
+	background-color: OldLace;
+}
+
+.FloralWhite {
+	background-color: FloralWhite;
+}
+
+.Ivory {
+	background-color: Ivory;
+}
+
+.AntiqueWhite {
+	background-color: AntiqueWhite;
+}
+
+.Linen {
+	background-color: Linen;
+}
+
+.LavenderBlush {
+	background-color: LavenderBlush;
+}
+
+.MistyRose {
+	background-color: MistyRose;
+}
+
+.Gainsboro {
+	background-color: Gainsboro;
+}
+
+.LightGrey {
+	background-color: LightGrey;
+}
+
+.Silver {
+	background-color: Silver;
+}
+
+.DarkGray {
+	background-color: DarkGray;
+}
+
+.Gray {
+	background-color: Gray;
+}
+
+.DimGray {
+	background-color: DimGray;
+}
+
+.LightSlateGray {
+	background-color: LightSlateGray;
+}
+
+.SlateGray {
+	background-color: SlateGray;
+}
+
+.DarkSlateGray {
+	background-color: DarkSlateGray;
+}
+
+.Black {
+	background-color: Black;
 }

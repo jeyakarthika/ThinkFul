@@ -557,14 +557,6 @@ h2 {
 	background-color: MediumPurple;
 }
 
-.Amethyst {
-	background-color: Amethyst;
-}
-
-.BlueViolet {
-	background-color: BlueViolet;
-}
-
 .DarkViolet {
 	background-color: DarkViolet;
 }
@@ -669,10 +661,6 @@ h2 {
 	background-color: DarkOliveGreen;
 }
 
-.MediumAquamarine {
-	background-color: MediumAquamarine;
-}
-
 .DarkSeaGreen {
 	background-color: DarkSeaGreen;
 }
@@ -687,6 +675,10 @@ h2 {
 
 .Teal {
 	background-color: Teal;
+}
+
+.MediumAquamarine {
+	background-color: MediumAquamarine;
 }
 
 .Aqua {
@@ -761,8 +753,8 @@ h2 {
 	background-color: CornflowerBlue;
 }
 
-.MediumSlateBlue {
-	background-color: MediumSlateBlue;
+.BlueViolet {
+	background-color: BlueViolet;
 }
 
 .RoyalBlue {
