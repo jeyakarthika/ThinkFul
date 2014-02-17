@@ -143,7 +143,7 @@ header .logo {
 
 h1 {
 	position: relative;
-	color: #FFC526;
+	color: #e64c65;
 	width: 100%;
 	font-family: 'Oregano', cursive;
 	font-size: 4em;
@@ -163,7 +163,6 @@ hr {
 .text > p {
 	text-align: justify;
 	line-height: 1.5em;
-	color: #FFC526;
 }
 
 .game-container {
@@ -179,20 +178,18 @@ hr {
 	font-size: 1em;
 	padding: 0.5em 5em;
 	border-radius: 3px;
-	border: 1px solid #FFC526;
-	background-color: #282828;
-	color: #FFC526;
+	background-color: #fff;
+	color: #282828;
 }
 
 .game:hover {
-	background-color: #FFC526;
+	background-color: #11a8ab;
 	color: #282828;
 }
 
 /*footer styles*/
 footer {
 	text-align: center;
-	color: #FFC526;
 }
 
 footer p {
@@ -364,10 +361,6 @@ h2 {
 		padding: 0.5em 0;
 	}
 
-	hr {
-		padding: 2em 0;
-	}
-
 	header .logo {
 		padding: 0.5em;
 	}
@@ -377,7 +370,7 @@ h2 {
 	}
 
 	h1 {
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 
 	.text > p {
@@ -387,17 +380,17 @@ h2 {
 
 	.game-container {
 		padding: 0.5em 0;
-		left: 25%;
+		left: 20%;
 	}
 
 	.game {
-		font-size: 0.8em;
+		font-size: 1em;
 		padding: 0.5em 3em;
 	}
 
 	footer p {
 		font-size: 0.8em;
-		padding: 1em 0.5em;
+		padding: 0.2em 0.5em 1em;
 	}
 
 	footer span {
