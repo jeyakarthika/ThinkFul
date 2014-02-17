@@ -14,43 +14,41 @@
 		<link rel="shortcut icon" href="images/favicon.ico">
 
 		<!-- Stylesheets -->
+		<link href='http://fonts.googleapis.com/css?family=Oregano' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles/style.css"/>
 
 		<!-- JavaScript -->
 		<script type="text/javascript" src="function/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="function/jquery-ui.js"></script>
 		<script type="text/javascript" src="function/action.js"></script>
 	
 	</head>
 	<body>
-
 		<!-- Modal Information Box -->
-		<section class="welcome overlay" id="modal">
+		<section class="welcome overlay">
 			<div class="content">
-				<h3>Name that Colour!</h3>
-				<div>
-					<p>Hello there! Do you think you know the difference between Magenta and Fuchsia? Well, You are about to find out. I have picked 10 HTML/CSS colour names as questions. Each question is given 5 shades from the same hue. All you need to do is click the colour represented by the colour name.</p>
-					
+				<header>
+					<a href="index.html" class="logo"><img src="images/logo.png"></a>
+					<h1>Name that Colour</h1>
+				</header>
+				<hr>
+				<div class="text">
+					<p>Hello there!</p> 
+					<br>
+					<p>Do you think you know the difference between Magenta and Fuchsia? Well, You are about to find out.</p>
+					<br>
+					<p>There are 12 HTML/CSS colour names randomly chosen from each hue as questions. Each question has 5 shades from the same hue as choices. All you need to do is click the colour corresponding to the colour name.</p>
+					<br>
 					<p>So, Are you ready?</p>
-
-					<p><a class="game" href="#">Start Game</a></p>
+					<br>
+					<p class="game-container"><a class="game" href="#">Start Game</a></p>
 				</div>
-			</div>
-		</section>
+				<hr>
+				<footer>
+					<p>Crafted with <span class="love"> &#9829; </span> by <a href="http://freshsqueaks.com">Jeya Karthika.</a></p>
+				</footer>
 
-		<!-- Modal Information Box -->
-		<section class="exit overlay" id="modal">
-			<div class="content">
-				<h3>Name that Colour!</h3>
-				<div>
-					<p>Hello there! Do you think you know the difference between Magenta and Fuchsia? Well, You are about to find out. I have picked 10 HTML/CSS colour names as questions. Each question is given 5 shades from the same hue. All you need to do is click the colour represented by the colour name.</p>
-					
-					<p>So, Are you ready?</p>
-
-					<p><a class="game" href="#">NewGame</a> <a class="close" href="#">Exit</a></p>
-				</div>
 			</div>
 		</section>
 
@@ -67,24 +65,29 @@
 				<li id="choice5"></li>
 			</ul>
 		</section>
-		
-		<section class="right">
-			<header>
-				<a href="index.html" class="logo"><img src="images/logo.png"></a>
-				<h1>Name that Colour</h1>
-			</header>
-			<div class="results-container">
-				<hr>
-				<p class="count"><span id="do">0</span> NAMED</p>
-				<hr>
-				<p class="count"><span id="done">0</span> MISSED</p>
-				<hr>
-				<p class="count"><span id="total">0</span> TOTAL</p>
-				<hr>
+
+		<section class="result overlay" id="modal">
+			<div class="content">
+				<ul class="blocks">
+					<li id="1"></li>
+					<li id="2"></li>
+					<li id="3"></li>
+					<li id="4"></li>
+					<li id="5"></li>
+					<li id="6"></li>
+					<li id="7"></li>
+					<li id="8"></li>
+					<li id="9"></li>
+					<li id="10"></li>
+					<li id="11"></li>
+					<li id="12"></li>
+				</ul>
+				<div class="message">
+					<p><span id="feedback">You Got it!</span></p>
+					<p><span id="qNumber">3 / 10</span></p>
+					<p id="next">Next</p>
+				</div>
 			</div>
-			<footer>
-				<p>Crafted with <span class="love"> &#9829; </span> by <a href="http://freshsqueaks.com">Jeya Karthika.</a></p>
-			</footer>
 		</section>
 
 	</body>

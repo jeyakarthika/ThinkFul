@@ -139,17 +139,14 @@ $(document).ready(function(){
 				  break;
 				}
 
-				console.log('question colour = '+colours.data[len].question);
 				while (flag < 5) {
 					colours.data[len].choices[flag] =  colours.data[len].shades[start];
-					console.log('question choices'+flag+' = '+colours.data[len].choices[flag]);
 					flag++;
 					start++;
 				};
 				flag = 0;
 
 				colours.data[len].answer = colours.data[len].question;
-				console.log('question answer = '+colours.data[len].answer);
 
 				len++;
 			};
@@ -161,23 +158,28 @@ $(document).ready(function(){
 			named = 0;
 			missed = 0;
 			updateCount();
+
+  			$(".result").fadeOut(1000);
+
+			for (var i = 1; i <= 12; i++) {
+				mark(i, '#282828');
+			};
+
+  			$('#next').text('Next');
 			$(".welcome").fadeIn(1000);
 			colours.generate();
 			newQuestion();
-			console.log('welcome');
 		},
 
 		next: function() {
 			updateCount();
 			$(".result").fadeIn(1000);
 			newQuestion();
-			console.log('next');
 		},
 
 		exit: function() {
 			updateCount();
 			$(".result").fadeIn(1000);
-			console.log('Exit');
 		}
 
 	};
@@ -186,7 +188,7 @@ $(document).ready(function(){
 	
 
 	function newQuestion() {
-		if (questionNumber < 10) {
+		if (questionNumber < 12) {
 			$question.fadeIn('slow').text(colours.data[questionNumber].question);
 			$c1.fadeIn('slow').addClass(colours.data[questionNumber].choices[0]);
 			$c2.fadeIn('slow').addClass(colours.data[questionNumber].choices[1]);
@@ -195,7 +197,8 @@ $(document).ready(function(){
 			$c5.fadeIn('slow').addClass(colours.data[questionNumber].choices[4]);
 			answer = colours.data[questionNumber].answer;
 
-			console.log("Q NO = "+questionNumber);
+			questionNumber++;
+		} else {
 			questionNumber++;
 		};
 	};
@@ -204,16 +207,18 @@ $(document).ready(function(){
 		e.preventDefault();
 		var selected = $(this).attr('class');
 		if (selected == answer) {
-			$(this).text('You got it!');
+			$('#feedback').text('You got it!');
 			updateCount(named++);
+			mark(questionNumber, answer);
 		} else {
-			$(this).text('Sorry!').delay;
+			$('#feedback').text('Sorry!');
 			updateCount(missed++);
+			mark(questionNumber, "#282828");
 		};
 		$(this).text('');
 		$question.text('');
 		$('ul li').removeClass();
-		if (questionNumber < 10) {
+		if (questionNumber <= 12) {
 			colours.next();
 		} else {
 			colours.exit();
@@ -221,26 +226,34 @@ $(document).ready(function(){
 	});
 
 	function updateCount() {
-		$('#do').text(named);
-		$('#done').text(missed);
-		$('#total').text(named + missed);
+		$('#qNumber').text((named+missed)+' / 12');
 	}
 
-  	/*--- Hide information modal box ---*/
-  	$("a.close").click(function(){
-  		$(".overlay").fadeOut(1000);
-  	});
+	/*--- Mark the results ---*/
+	function mark(qno, bg) {
+		var $targetid = $('li#'+qno);
+		$targetid.css("background-color", bg);
+	}
 
+  	/*--- Start Game ---*/
   	$("a.game").click(function(e){
   		e.preventDefault();
   		$(".welcome").fadeOut(1000);
   	});
 
-  	$("p.next").click(function(e){
+  	$("#next").click(function(e){
   		e.preventDefault();
-  		if (questionNumber == 10) {
+  		if (questionNumber > 13) {
   			colours.init();
-  		} else{
+  		} else if (questionNumber > 12) {
+  			if (named == 12) {
+  				$('#feedback').text('Awesome! You Win.');
+  			} else{
+	  			$('#feedback').text('Sorry! You lose.');
+  			};
+  			$('#next').text('Play Again?');
+  			newQuestion();
+  		} else {
   			$(".result").fadeOut(1000);
   		};
   	});
@@ -248,21 +261,4 @@ $(document).ready(function(){
 });
 
 
-/*
-	var named = 3;
-	var missed = 1;
-	var x = 6; // can be any number
-	var rand = Math.floor(Math.random()*x) + 1;
-	updateCount();
 
-	function setFocus() {
-		$('#newItem').val('');
-		document.getElementById("newItem").focus();
-	}
-
-	function updateCount() {
-		$('#do').text(named);
-		$('#done').text(missed);
-		$('#total').text(named + missed);
-	}
-*/

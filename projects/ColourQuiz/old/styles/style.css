@@ -94,41 +94,42 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-section {
-	position: absolute;
-	height: 100%;
-}
+/*---------------------------------------------------------------------------------
+   Overlay Section Styles
+---------------------------------------------------------------------------------*/
 
-.left {
-	width: 75%;
+.overlay {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background: #282828;
+	position: absolute;
 	top: 0;
 	left: 0;
-	font-weight: 300;
-}
-
-.right {
-	width: 25%;
-	top: 0;
-	right: 0;
-	font-weight: 400;
-	color: #fff;
-	background-color: #282828;
+	margin: 0;
+	z-index: 1000;
+	overflow: hidden;
+	text-align: center;
+	display: none;
 }
 
 /*---------------------------------------------------------------------------------
-   Info Section Styles
+   Welcome Overlay Section Styles
 ---------------------------------------------------------------------------------*/
 
-.header, div.results-container, footer {
+.content {
+	color: #fff;
 	position: relative;
-	width: 100%;
-	margin: auto;
-	text-align: center;
+	height: 100%;
+	width: 80%;
+	margin: 0 auto;
 }
 
-header {
-	height: 20%;
-	margin: 1em 0 0.5em;
+.header, div.text, footer {
+	position: relative;
+	padding: 0.5em;
+	width: 50%;
+	margin: 0 auto;
 }
 
 header .logo {
@@ -137,31 +138,17 @@ header .logo {
 	display: block;
 	text-decoration: none;
 	text-align: center;
+	padding-top: 1em;
 }
 
 h1 {
 	position: relative;
+	color: #FFC526;
 	width: 100%;
-	font-family: 'Rancho', cursive;
-	font-size: 3em;
-	text-align: center;
-}
-
-.results-container {
-	height: 60%;
-	padding: 2.8em 0.2em 2.5em; 
-}
-
-.count {
-	text-align: center;
-	font-size: 1.2em;
-	color: #11a8ab;
-}
-
-#do, #done, #total {
-	color: #e64c65;
+	font-family: 'Oregano', cursive;
 	font-size: 4em;
-	display: block;
+	text-align: center;
+	padding: 0 0 0.3em;
 }
 
 /*Horizontal rule styling based on Chris Coyiers article*/
@@ -174,19 +161,47 @@ hr {
     background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
 }
 
+.text > p {
+	text-align: justify;
+	line-height: 1.5em;
+	color: #FFC526;
+}
+
+.game-container {
+	position: relative;
+	width: 100%;
+	padding: 1em 0;
+	left: 25%;
+}
+
+.game {
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+	background: #11a8ab;
+	padding: 0.5em 5em;
+	border-radius: 3px;
+	border: 1px solid #FFC526;
+	background-color: #282828;
+	color: #FFC526;
+}
+
+.game:hover {
+	background-color: #FFC526;
+	color: #282828;
+}
+
 /*footer styles*/
 footer {
-	height: 15%;
-	margin: 1em 0;
 	text-align: center;
+	color: #FFC526;
 }
 
 footer p {
-	font-size: 1.2em;
-	padding: 1em 0.2em;
+	font-size: 1em;
+	padding: 0 0 0.2em;
 	line-height: 1.2em;
 	font-weight: 300;
-	color: #fff;
 	margin: 0 auto;
 }
 
@@ -197,11 +212,20 @@ footer span {
 
 footer a {
 	color: #11a8ab;
-	display: block;
 }
+
 /*---------------------------------------------------------------------------------
-   Quiz App Section Styles
+   Quiz Section
 ---------------------------------------------------------------------------------*/
+
+.left {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	font-weight: 300;
+}
+
 #question-container {
 	position: relative;
 	text-align: center;
@@ -214,6 +238,7 @@ h2 {
 	vertical-align: middle;
 	line-height: 2em;
 }
+
 /*List Styles*/
 #choices {
 	position: relative;
@@ -230,170 +255,69 @@ h2 {
 }
 
 /*---------------------------------------------------------------------------------
-   Style for hidden modal
+   Results Overlay
 ---------------------------------------------------------------------------------*/
 
-.overlay {
-	width: 100%;
-	height: 100%;
-	color: #fff;
-	background: #e74c3c;
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	z-index: 1000;
-	display: none;
-	overflow: hidden;
-}
-
-.content {
-	color: #fff;
-	background: #e74c3c;
+.blocks {
 	position: relative;
-	height: 65%;
+	width: 100%;
+	height: 50%;
+	top: 2%;
+	left: 0;
+}
+
+.blocks li {
+	position: relative;
+	width: 20%;
+	height: 25%;
+	display: inline-block;
+	border: 3px solid #121212;
+	margin: 2%;
+}
+
+.message {
+	position: relative;
+	width: 100%;
+	height: 50%;
+	border: 0;
+	margin: 0 auto;
+}
+
+.message > p {
+	position: relative;
+	top: 40%;
+	float: left;
+	display: inline-block;
+}
+
+.message > p:nth-child(1) {
+	width: 100%;
+	font-size: 5em;
+	color: #11a8ab;
+	top: 25%;
+	padding: 0.3em;
+}
+
+.message > p:nth-child(2), .message > p:nth-child(3) {
 	width: 50%;
-	border-radius: 3px;
-	top: 15%;
-	margin: auto auto;
-	border: 1px solid rgba(0,0,0,0.1);
+	top: 30%;
+	font-size: 3em;
+	color: #282828;
+	border: 1px solid #282828;
+	padding: 0.3em;
+	background-color: #11a8ab;
 }
 
-.content h3 {
-	margin: 0;
-	padding: 0.4em;
-	text-align: center;
-	font-size: 2.4em;
-	font-weight: 300;
-	opacity: 0.8;
-	background: rgba(0,0,0,0.1);
-	border-radius: 3px 3px 0 0;
+.message > p:nth-child(3) {
+	cursor: pointer;
 }
 
-.content > div {
-	padding: 15px 40px 30px;
-	margin: 0;
-	font-weight: 300;
-	font-size: 1.15em;
+.message > p:nth-child(3):hover {
+	cursor: pointer;
+	border: 1px solid #11a8ab;
+	background-color: #282828;
+	color: #11a8ab;
 }
-
-.content > div p {
-	margin: 0;
-	padding: 10px 0;
-	line-height: 2em;
-	text-align: justify;
-}
-
-.content > div ul {
-	margin-bottom: -30px;
-	padding: 0 0 30px 20px;
-	text-align: left;
-}
-
-.content > div ul li {
-	padding: 5px 0;
-	display: block;	
-	list-style-type: disc;
-	line-height: 1.5em;
-}
-
-.content > div ul li strong{
-	text-decoration: underline;
-}
-
-.content > div a {
-	text-decoration: none;
-	font-size: 1em;
-	background: #1F253D;
-	color: #95a5a6;
-	padding: 0.5em 2em;
-	margin-bottom: 50px;
-	border-radius: 3px;
-}
-
-/*---------------------------------------------------------------------------------
-   Media Queries for responsiveness
----------------------------------------------------------------------------------*/
-
-@media only screen and (min-width: 481px) and (max-width: 800px){
-	h1 {
-		font-size: 2.2em;
-	}
-
-	.count {
-		font-size: 1.2em;
-	}
-
-	#do, #done, #total {
-		font-size: 3.5em;
-	}
-
-	footer {
-		margin: 0.2em 0;
-	}
-
-	footer p {
-		font-size: 1em;
-		padding: 0.5em;
-	}
-
-	footer span {
-		font-size: 1.2em;
-	}
-}
-
-@media only screen and (min-width: 0px) and (max-width: 480px){
-
-	header {
-		margin: 0.2em;
-	}
-
-	.logo img {
-		width: 75px;
-	}
-
-	h1 {
-		font-size: 1.5em;
-	}
-
-	.count {
-		font-size: 1em;
-	}
-
-	#do, #done, #total {
-		font-size: 3em;
-	}
-
-	footer {
-		margin: 0.5em 0;
-	}
-
-	footer p {
-		font-size: 0.8em;
-		padding: 1em 0.5em;
-	}
-
-	footer span {
-		font-size: 1em;
-	}
-
-	h2 {
-		font-size: 2em;
-		line-height: 3em;
-	}
-
-	.content {
-		width: 95%;
-		height: 95%;
-		font-size: 0.75em;
-	}
-
-	.content > div p {
-		line-height: 1.5em;
-	}
-
-}
-
 /*---------------------------------------------------------------------------------
    Colour Name Styles
 ---------------------------------------------------------------------------------*/
@@ -956,4 +880,3 @@ h2 {
 .Black {
 	background-color: Black;
 }
-
