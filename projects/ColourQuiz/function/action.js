@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------------------
 
-	Project Name: todo
-	Project Description: A Thinkful Shopping List App
+	Project Name: NAme that Colour
+	Project Description: A Thinkful Quiz App
 	File Name: action.js
 	Author: Jeya Karthika
 	Author URI: http://www.freshsqueaks.com
