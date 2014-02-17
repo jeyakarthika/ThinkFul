@@ -110,6 +110,7 @@ body {
 	z-index: 1000;
 	overflow: hidden;
 	text-align: center;
+	display: none;
 }
 
 /*---------------------------------------------------------------------------------
@@ -142,13 +143,12 @@ header .logo {
 
 h1 {
 	position: relative;
-	color: #282828;
+	color: #FFC526;
 	width: 100%;
 	font-family: 'Oregano', cursive;
 	font-size: 4em;
 	text-align: center;
 	padding: 0 0 0.3em;
-  	text-shadow: #11a8ab -1px 0, #11a8ab 0 -1px, #11a8ab 0 1px, #11a8ab -1px -1px;
 }
 
 /*Horizontal rule styling based on Chris Coyiers article*/
@@ -164,7 +164,7 @@ hr {
 .text > p {
 	text-align: justify;
 	line-height: 1.5em;
-	color: #11a8ab;
+	color: #FFC526;
 }
 
 .game-container {
@@ -181,19 +181,20 @@ hr {
 	background: #11a8ab;
 	padding: 0.5em 5em;
 	border-radius: 3px;
-	border: 1px solid #11a8ab;
+	border: 1px solid #FFC526;
 	background-color: #282828;
-	color: #11a8ab;
+	color: #FFC526;
 }
 
 .game:hover {
-	background-color: #11a8ab;
+	background-color: #FFC526;
 	color: #282828;
 }
 
 /*footer styles*/
 footer {
 	text-align: center;
+	color: #FFC526;
 }
 
 footer p {
@@ -201,7 +202,6 @@ footer p {
 	padding: 0 0 0.2em;
 	line-height: 1.2em;
 	font-weight: 300;
-	color: #fff;
 	margin: 0 auto;
 }
 
@@ -257,11 +257,7 @@ h2 {
 /*---------------------------------------------------------------------------------
    Results Overlay
 ---------------------------------------------------------------------------------*/
-.result {
-	position: relative;
-	height: 100%;
-	width: 100%;
-}
+
 .blocks {
 	position: relative;
 	width: 100%;

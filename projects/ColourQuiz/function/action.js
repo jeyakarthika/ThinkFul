@@ -11,8 +11,17 @@
 
 $(document).ready(function(){
 
+	var questionNumber = 0;
+	var $question = $('#question');
+	var $c1 = $('#choice1');
+	var $c2 = $('#choice2');
+	var $c3 = $('#choice3');
+	var $c4 = $('#choice4');
+	var $c5 = $('#choice5');
+	var answer = "";
+	var named = 0;
+	var missed = 0;
 
-	var question = [{},{},{},{},{},{},{},{},{},{}];
 	var colours = {
 		data: [
 				{ 
@@ -73,7 +82,7 @@ $(document).ready(function(){
 				},
 				{ 
 					hue: 'brown', 
-					shades: ['Cornsilk', 'BlanchedAlmond', 'Bisque', 'Nav-ajoWhite', 'Wheat', 'BurlyWood', 'Tan', 'RosyBrown', 'SandyBrown', 'Goldenrod', 'DarkGoldenrod', 'Peru', 'Chocolate', 'SaddleBrown', 'Sienna', 'Brown', 'Maroon'],
+					shades: ['Cornsilk', 'BlanchedAlmond', 'Bisque', 'NavajoWhite', 'Wheat', 'BurlyWood', 'Tan', 'RosyBrown', 'SandyBrown', 'Goldenrod', 'DarkGoldenrod', 'Peru', 'Chocolate', 'SaddleBrown', 'Sienna', 'Brown', 'Maroon'],
 					question: '',
 					choices: [],
 					answer: ''
@@ -147,23 +156,33 @@ $(document).ready(function(){
 		},
 
 		init: function() {
+			questionNumber = 0;
+			answer = "";
+			named = 0;
+			missed = 0;
+			updateCount();
+			$(".welcome").fadeIn(1000);
+			colours.generate();
+			newQuestion();
+			console.log('welcome');
+		},
 
+		next: function() {
+			updateCount();
+			$(".result").fadeIn(1000);
+			newQuestion();
+			console.log('next');
+		},
+
+		exit: function() {
+			updateCount();
+			$(".result").fadeIn(1000);
+			console.log('Exit');
 		}
 
 	};
 
-	var questionNumber = 0;
-	var $question = $('#question');
-	var $c1 = $('#choice1');
-	var $c2 = $('#choice2');
-	var $c3 = $('#choice3');
-	var $c4 = $('#choice4');
-	var $c5 = $('#choice5');
-	var answer = "";
-	var doCount = 0;
-	var doneCount = 0;
-	updateCount();
-	announce('welcome');
+	colours.init();
 	
 
 	function newQuestion() {
@@ -178,9 +197,6 @@ $(document).ready(function(){
 
 			console.log("Q NO = "+questionNumber);
 			questionNumber++;
-		} else {
-			announce('exit');
-			console.log("Quiz Completed");
 		};
 	};
 
@@ -189,34 +205,25 @@ $(document).ready(function(){
 		var selected = $(this).attr('class');
 		if (selected == answer) {
 			$(this).text('You got it!');
-			updateCount(doCount++);
+			updateCount(named++);
 		} else {
 			$(this).text('Sorry!').delay;
-			updateCount(doneCount++);
+			updateCount(missed++);
 		};
 		$(this).text('');
-		$question.fadeOut('slow').text('');
-		$('ul li').fadeOut('slow').removeClass();
-		newQuestion();
+		$question.text('');
+		$('ul li').removeClass();
+		if (questionNumber < 10) {
+			colours.next();
+		} else {
+			colours.exit();
+		};
 	});
 
 	function updateCount() {
-		$('#do').text(doCount);
-		$('#done').text(doneCount);
-		$('#total').text(doCount + doneCount);
-	}
-
-	function announce(mode) {
-		switch(mode) {
-			case 'welcome':
-    			$(".welcome").fadeIn(1000);
-				console.log('welcome');
-				break;
-			case 'exit':
-				$(".result").fadeIn(1000);
-				console.log('Exit');
-				break;
-		}
+		$('#do').text(named);
+		$('#done').text(missed);
+		$('#total').text(named + missed);
 	}
 
   	/*--- Hide information modal box ---*/
@@ -224,23 +231,26 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
-  	$(".game").click(function(e){
+  	$("a.game").click(function(e){
   		e.preventDefault();
-  		colours.generate();
-  		doCount = 0;
-		doneCount = 0;
-  		questionNumber = 0;
-  		updateCount();
-		newQuestion();
-  		$(".overlay").fadeOut(1000);
+  		$(".welcome").fadeOut(1000);
+  	});
+
+  	$("p.next").click(function(e){
+  		e.preventDefault();
+  		if (questionNumber == 10) {
+  			colours.init();
+  		} else{
+  			$(".result").fadeOut(1000);
+  		};
   	});
 
 });
 
 
 /*
-	var doCount = 3;
-	var doneCount = 1;
+	var named = 3;
+	var missed = 1;
 	var x = 6; // can be any number
 	var rand = Math.floor(Math.random()*x) + 1;
 	updateCount();
@@ -251,8 +261,8 @@ $(document).ready(function(){
 	}
 
 	function updateCount() {
-		$('#do').text(doCount);
-		$('#done').text(doneCount);
-		$('#total').text(doCount + doneCount);
+		$('#do').text(named);
+		$('#done').text(missed);
+		$('#total').text(named + missed);
 	}
 */
