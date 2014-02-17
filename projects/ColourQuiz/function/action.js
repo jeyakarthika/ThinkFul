@@ -175,7 +175,7 @@ $(document).ready(function(){
 			updateCount();
 			$(".result").slideDown(500);
 			newQuestion();
-		},
+		}
 
 	};
 
@@ -255,6 +255,3 @@ $(document).ready(function(){
   	});
 
 });
-
-
-
