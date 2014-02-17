@@ -11,8 +11,17 @@
 
 $(document).ready(function(){
 
+	var questionNumber = 0;
+	var $question = $('#question');
+	var $c1 = $('#choice1');
+	var $c2 = $('#choice2');
+	var $c3 = $('#choice3');
+	var $c4 = $('#choice4');
+	var $c5 = $('#choice5');
+	var answer = "";
+	var named = 0;
+	var missed = 0;
 
-	var question = [{},{},{},{},{},{},{},{},{},{}];
 	var colours = {
 		data: [
 				{ 
@@ -73,7 +82,7 @@ $(document).ready(function(){
 				},
 				{ 
 					hue: 'brown', 
-					shades: ['Cornsilk', 'BlanchedAlmond', 'Bisque', 'Nav-ajoWhite', 'Wheat', 'BurlyWood', 'Tan', 'RosyBrown', 'SandyBrown', 'Goldenrod', 'DarkGoldenrod', 'Peru', 'Chocolate', 'SaddleBrown', 'Sienna', 'Brown', 'Maroon'],
+					shades: ['Cornsilk', 'BlanchedAlmond', 'Bisque', 'NavajoWhite', 'Wheat', 'BurlyWood', 'Tan', 'RosyBrown', 'SandyBrown', 'Goldenrod', 'DarkGoldenrod', 'Peru', 'Chocolate', 'SaddleBrown', 'Sienna', 'Brown', 'Maroon'],
 					question: '',
 					choices: [],
 					answer: ''
@@ -130,44 +139,56 @@ $(document).ready(function(){
 				  break;
 				}
 
-				console.log('question colour = '+colours.data[len].question);
 				while (flag < 5) {
 					colours.data[len].choices[flag] =  colours.data[len].shades[start];
-					console.log('question choices'+flag+' = '+colours.data[len].choices[flag]);
 					flag++;
 					start++;
 				};
 				flag = 0;
 
 				colours.data[len].answer = colours.data[len].question;
-				console.log('question answer = '+colours.data[len].answer);
 
 				len++;
 			};
 		},
 
 		init: function() {
+			questionNumber = 0;
+			answer = "";
+			named = 0;
+			missed = 0;
+			updateCount();
 
+  			$(".result").fadeOut(1000);
+
+			for (var i = 1; i <= 12; i++) {
+				mark(i, '#282828');
+			};
+
+  			$('#next').text('Next');
+			$(".welcome").fadeIn(1000);
+			colours.generate();
+			newQuestion();
+		},
+
+		next: function() {
+			updateCount();
+			$(".result").fadeIn(1000);
+			newQuestion();
+		},
+
+		exit: function() {
+			updateCount();
+			$(".result").fadeIn(1000);
 		}
 
 	};
 
-	var questionNumber = 0;
-	var $question = $('#question');
-	var $c1 = $('#choice1');
-	var $c2 = $('#choice2');
-	var $c3 = $('#choice3');
-	var $c4 = $('#choice4');
-	var $c5 = $('#choice5');
-	var answer = "";
-	var doCount = 0;
-	var doneCount = 0;
-	updateCount();
-	announce('welcome');
+	colours.init();
 	
 
 	function newQuestion() {
-		if (questionNumber < 10) {
+		if (questionNumber < 12) {
 			$question.fadeIn('slow').text(colours.data[questionNumber].question);
 			$c1.fadeIn('slow').addClass(colours.data[questionNumber].choices[0]);
 			$c2.fadeIn('slow').addClass(colours.data[questionNumber].choices[1]);
@@ -176,11 +197,9 @@ $(document).ready(function(){
 			$c5.fadeIn('slow').addClass(colours.data[questionNumber].choices[4]);
 			answer = colours.data[questionNumber].answer;
 
-			console.log("Q NO = "+questionNumber);
 			questionNumber++;
 		} else {
-			announce('exit');
-			console.log("Quiz Completed");
+			questionNumber++;
 		};
 	};
 
@@ -188,71 +207,58 @@ $(document).ready(function(){
 		e.preventDefault();
 		var selected = $(this).attr('class');
 		if (selected == answer) {
-			$(this).text('You got it!');
-			updateCount(doCount++);
+			$('#feedback').text('You got it!');
+			updateCount(named++);
+			mark(questionNumber, answer);
 		} else {
-			$(this).text('Sorry!').delay;
-			updateCount(doneCount++);
+			$('#feedback').text('Sorry!');
+			updateCount(missed++);
+			mark(questionNumber, "#282828");
 		};
 		$(this).text('');
-		$question.fadeOut('slow').text('');
-		$('ul li').fadeOut('slow').removeClass();
-		newQuestion();
+		$question.text('');
+		$('ul li').removeClass();
+		if (questionNumber <= 12) {
+			colours.next();
+		} else {
+			colours.exit();
+		};
 	});
 
 	function updateCount() {
-		$('#do').text(doCount);
-		$('#done').text(doneCount);
-		$('#total').text(doCount + doneCount);
+		$('#qNumber').text((named+missed)+' / 12');
 	}
 
-	function announce(mode) {
-		switch(mode) {
-			case 'welcome':
-    			$(".welcome").fadeIn(1000);
-				console.log('welcome');
-				break;
-			case 'exit':
-				$(".result").fadeIn(1000);
-				console.log('Exit');
-				break;
-		}
+	/*--- Mark the results ---*/
+	function mark(qno, bg) {
+		var $targetid = $('li#'+qno);
+		$targetid.css("background-color", bg);
 	}
 
-  	/*--- Hide information modal box ---*/
-  	$("a.close").click(function(){
-  		$(".overlay").fadeOut(1000);
+  	/*--- Start Game ---*/
+  	$("a.game").click(function(e){
+  		e.preventDefault();
+  		$(".welcome").fadeOut(1000);
   	});
 
-  	$(".game").click(function(e){
+  	$("#next").click(function(e){
   		e.preventDefault();
-  		colours.generate();
-  		doCount = 0;
-		doneCount = 0;
-  		questionNumber = 0;
-  		updateCount();
-		newQuestion();
-  		$(".overlay").fadeOut(1000);
+  		if (questionNumber > 13) {
+  			colours.init();
+  		} else if (questionNumber > 12) {
+  			if (named == 12) {
+  				$('#feedback').text('Awesome! You Win.');
+  			} else{
+	  			$('#feedback').text('Sorry! You lose.');
+  			};
+  			$('#next').text('Play Again?');
+  			newQuestion();
+  		} else {
+  			$(".result").fadeOut(1000);
+  		};
   	});
 
 });
 
 
-/*
-	var doCount = 3;
-	var doneCount = 1;
-	var x = 6; // can be any number
-	var rand = Math.floor(Math.random()*x) + 1;
-	updateCount();
 
-	function setFocus() {
-		$('#newItem').val('');
-		document.getElementById("newItem").focus();
-	}
-
-	function updateCount() {
-		$('#do').text(doCount);
-		$('#done').text(doneCount);
-		$('#total').text(doCount + doneCount);
-	}
-*/
