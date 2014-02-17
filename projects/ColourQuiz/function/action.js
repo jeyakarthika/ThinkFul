@@ -159,27 +159,27 @@ $(document).ready(function(){
 			missed = 0;
 			updateCount();
 
-  			$(".result").fadeOut(1000);
+  			$(".result").slideUp(500);
 
 			for (var i = 1; i <= 12; i++) {
 				mark(i, '#282828');
 			};
 
   			$('#next').text('Next');
-			$(".welcome").fadeIn(1000);
+			$(".welcome").slideDown(500);
 			colours.generate();
 			newQuestion();
 		},
 
 		next: function() {
 			updateCount();
-			$(".result").fadeIn(1000);
+			$(".result").slideDown(500);
 			newQuestion();
 		},
 
 		exit: function() {
 			updateCount();
-			$(".result").fadeIn(1000);
+			$(".result").slideDown(500);
 		}
 
 	};
@@ -189,12 +189,12 @@ $(document).ready(function(){
 
 	function newQuestion() {
 		if (questionNumber < 12) {
-			$question.fadeIn('slow').text(colours.data[questionNumber].question);
-			$c1.fadeIn('slow').addClass(colours.data[questionNumber].choices[0]);
-			$c2.fadeIn('slow').addClass(colours.data[questionNumber].choices[1]);
-			$c3.fadeIn('slow').addClass(colours.data[questionNumber].choices[2]);
-			$c4.fadeIn('slow').addClass(colours.data[questionNumber].choices[3]);
-			$c5.fadeIn('slow').addClass(colours.data[questionNumber].choices[4]);
+			$question.slideDown('slow').text(colours.data[questionNumber].question);
+			$c1.slideDown('slow').addClass(colours.data[questionNumber].choices[0]);
+			$c2.slideDown('slow').addClass(colours.data[questionNumber].choices[1]);
+			$c3.slideDown('slow').addClass(colours.data[questionNumber].choices[2]);
+			$c4.slideDown('slow').addClass(colours.data[questionNumber].choices[3]);
+			$c5.slideDown('slow').addClass(colours.data[questionNumber].choices[4]);
 			answer = colours.data[questionNumber].answer;
 
 			questionNumber++;
@@ -238,7 +238,7 @@ $(document).ready(function(){
   	/*--- Start Game ---*/
   	$("a.game").click(function(e){
   		e.preventDefault();
-  		$(".welcome").fadeOut(1000);
+  		$(".welcome").slideUp(500);
   	});
 
   	$("#next").click(function(e){
@@ -254,7 +254,7 @@ $(document).ready(function(){
   			$('#next').text('Play Again?');
   			newQuestion();
   		} else {
-  			$(".result").fadeOut(1000);
+  			$(".result").slideUp(500);
   		};
   	});
 
