@@ -177,16 +177,12 @@ $(document).ready(function(){
 			newQuestion();
 		},
 
-		exit: function() {
-			updateCount();
-			$(".result").slideDown(500);
-		}
-
 	};
 
+	/*--- Initialize Quiz on load ---*/
 	colours.init();
 	
-
+	/*--- set the new question ---*/
 	function newQuestion() {
 		if (questionNumber < 12) {
 			$question.slideDown('slow').text(colours.data[questionNumber].question);
@@ -203,6 +199,7 @@ $(document).ready(function(){
 		};
 	};
 
+	/*--- Validate the answer & update the feedback, questions completed and  ---*/
 	$('#choices').on('click', 'li', function(e){
 		e.preventDefault();
 		var selected = $(this).attr('class');
@@ -220,11 +217,10 @@ $(document).ready(function(){
 		$('ul li').removeClass();
 		if (questionNumber <= 12) {
 			colours.next();
-		} else {
-			colours.exit();
-		};
+		}
 	});
 
+	/*--- Update the number of questions completed ---*/
 	function updateCount() {
 		$('#qNumber').text((named+missed)+' / 12');
 	}
@@ -240,7 +236,7 @@ $(document).ready(function(){
   		e.preventDefault();
   		$(".welcome").slideUp(500);
   	});
-
+  	/*--- When the player clicks next it checks if the player wants to play again or has completed all 12 questions or just next question ---*/
   	$("#next").click(function(e){
   		e.preventDefault();
   		if (questionNumber > 13) {
