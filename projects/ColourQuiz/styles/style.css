@@ -148,7 +148,6 @@ h1 {
 	font-family: 'Oregano', cursive;
 	font-size: 4em;
 	text-align: center;
-	padding: 0 0 0.3em;
 }
 
 /*Horizontal rule styling based on Chris Coyiers article*/
@@ -344,10 +343,6 @@ h2 {
 		font-size: 0.88em;
 	}
 
-	footer {
-		margin: 0.2em 0;
-	}
-
 	footer p {
 		font-size: 1em;
 		padding: 0.5em;
@@ -363,6 +358,14 @@ h2 {
 	.header, div.text, footer {
 		width: 98%;
 		padding: 0;
+	}
+
+	div.text {
+		padding: 0.5em 0;
+	}
+
+	hr {
+		padding: 2em 0;
 	}
 
 	header .logo {
@@ -390,10 +393,6 @@ h2 {
 	.game {
 		font-size: 0.8em;
 		padding: 0.5em 3em;
-	}
-
-	footer {
-		margin: 0.5em 0;
 	}
 
 	footer p {
