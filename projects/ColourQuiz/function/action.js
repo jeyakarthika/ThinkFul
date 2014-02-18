@@ -159,22 +159,26 @@ $(document).ready(function(){
 			missed = 0;
 			updateCount();
 
-  			$(".result").slideUp(500);
+  			$(".result").slideUp(500, function(){
+  				for (var i = 1; i <= 12; i++) {
+					mark(i, '#282828');
+				};
 
-			for (var i = 1; i <= 12; i++) {
-				mark(i, '#282828');
-			};
-
-  			$('#next').text('Next');
-			$(".welcome").slideDown(500);
-			colours.generate();
-			newQuestion();
+	  			$('#next').text('Next');
+				$(".welcome").slideDown(500, function(){
+					colours.generate();
+					newQuestion();
+				});
+  			});
 		},
 
 		next: function() {
 			updateCount();
-			$(".result").slideDown(500);
-			newQuestion();
+			$(".result").slideDown(500, function(){
+				newQuestion();
+
+				$('.quizArea').slideDown(500);
+			});
 		}
 
 	};
@@ -202,6 +206,7 @@ $(document).ready(function(){
 	/*--- Validate the answer & update the feedback, questions completed and  ---*/
 	$('#choices').on('click', 'li', function(e){
 		e.preventDefault();
+		$('.quizArea').slideUp(500);
 		var selected = $(this).attr('class');
 		if (selected == answer) {
 			$('#feedback').text('You got it!');
@@ -236,6 +241,7 @@ $(document).ready(function(){
   		e.preventDefault();
   		$(".welcome").slideUp(500);
   	});
+
   	/*--- When the player clicks next it checks if the player wants to play again or has completed all 12 questions or just next question ---*/
   	$("#next").click(function(e){
   		e.preventDefault();
