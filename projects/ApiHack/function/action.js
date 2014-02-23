@@ -24,10 +24,11 @@ $(document).ready(function(){
 
                     	//get the photo id
                     	photoID = item.id;
+                    	console.log(photoID);
 
                     	//create the photo url
                     	//var photoURL = 'http://www.flickr.com/photos/jeyakarthika/'+photoID+'/';
-                    	photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
+                    	photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_z.jpg';
 
                     	//create the image html structure
                         $image = $('<a href="'+photoURL+'"><img src="'+photoURL+'" /></a>');
@@ -35,6 +36,14 @@ $(document).ready(function(){
                         //add the image to the DOM
                         $image.appendTo('#image-container');
 
+                    });
+
+                    $("#image-container").justifiedGallery({
+                    		'rowHeight' : 160, 
+							'fixedHeight' : true,
+							'captions' : false,
+							'target' : '_blank',
+							'margins' : 2
                     });
 
     });
