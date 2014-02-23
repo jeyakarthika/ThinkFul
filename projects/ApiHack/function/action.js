@@ -42,6 +42,7 @@ $(document).ready(function(){
                     		'rowHeight' : 160, 
 							'fixedHeight' : true,
 							'captions' : false,
+                            'target' : '_blank',
 							'margins' : 2
                     });
 
