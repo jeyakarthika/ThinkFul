@@ -27,11 +27,11 @@ $(document).ready(function(){
                     	console.log(photoID);
 
                     	//create the photo url
-                    	//var photoURL = 'http://www.flickr.com/photos/jeyakarthika/'+photoID+'/';
+                    	photoAnchor = 'http://www.flickr.com/photos/jeyakarthika/'+photoID+'/';
                     	photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_z.jpg';
 
                     	//create the image html structure
-                        $image = $('<a href="'+photoURL+'"><img src="'+photoURL+'" /></a>');
+                        $image = $('<a class="image" href="'+photoAnchor+'"><img src="'+photoURL+'" /></a>');
 
                         //add the image to the DOM
                         $image.appendTo('#image-container');
@@ -42,7 +42,6 @@ $(document).ready(function(){
                     		'rowHeight' : 160, 
 							'fixedHeight' : true,
 							'captions' : false,
-							'target' : '_blank',
 							'margins' : 2
                     });
 
