@@ -31,7 +31,7 @@ $(document).ready(function(){
                     	photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_z.jpg';
 
                     	//create the image html structure
-                        $image = $('<a class="image" href="'+photoAnchor+'"><img src="'+photoURL+'" /></a>');
+                        $image = $('<a href="'+photoAnchor+'"><img src="'+photoURL+'"/></a>');
 
                         //add the image to the DOM
                         $image.appendTo('#image-container');
@@ -47,5 +47,6 @@ $(document).ready(function(){
                     });
 
     });
+
 	
 });
