@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
-	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 <g id="Layer_2">
-	<circle display="none" fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="50.145" cy="49.795" r="45"/>
-	<text transform="matrix(1 0 0 1 38.1167 57.0518)" display="none" font-family="'GrandHotel-Regular'" font-size="60">ȷk</text>
-	<text transform="matrix(1 0 0 1 38.1167 57.0518)" font-family="'GrandHotel-Regular'" font-size="60">ȷk</text>
+	
+		<image overflow="visible" opacity="0.5" width="90" height="133" xlink:href="A878FD9FC4BAAA8D.png"  transform="matrix(1 0 0 1 10.5 -22.5)">
+	</image>
+	<g>
+		<g>
+			<text transform="matrix(1 0 0 1 34.9678 60.5156)" font-family="'GrandHotel-Regular'" font-size="76">ȷk</text>
+		</g>
+	</g>
 </g>
 <g id="Layer_3">
 	
-		<text transform="matrix(0.863 -0.5052 0.5052 0.863 44.8584 42.8369)" display="none" font-family="'GrandHotel-Regular'" font-size="24">˘</text>
+		<text transform="matrix(0.863 -0.5052 0.5052 0.863 44.8584 42.8369)" display="none" enable-background="new    " font-family="'GrandHotel-Regular'" font-size="24">˘</text>
 	
-		<text transform="matrix(-0.863 0.5052 -0.5052 -0.863 41.1611 18.1089)" display="none" font-family="'GrandHotel-Regular'" font-size="12" letter-spacing="-1">˘˘</text>
+		<text transform="matrix(-0.863 0.5052 -0.5052 -0.863 41.1621 18.1084)" display="none" enable-background="new    " font-family="'GrandHotel-Regular'" font-size="12">˘˘</text>
 </g>
 </svg>
