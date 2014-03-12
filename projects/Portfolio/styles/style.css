@@ -94,7 +94,7 @@ body {
 }
 
 /*---------------------------------------------------------------------------------
-   Section Styles
+   Mobile-First Styling
 ---------------------------------------------------------------------------------*/
 
 #home {
@@ -121,40 +121,4 @@ body {
   background-size: cover;
 }
 
-/*---------------------------------------------------------------------------------
-   Footer Styles
----------------------------------------------------------------------------------*/
 
-footer {
-	margin-top: 1.5em;
-}
-
-footer p {
-	color: #333;
-}
-
-footer p span {
-	color: #e64c65;
-	font-size: 1.5em;
-}
-
-footer p a {
-	color: #11a8ab;
-}
-
-/*---------------------------------------------------------------------------------
-   Media Queries for responsiveness
----------------------------------------------------------------------------------*/
-@media(min-width:767px) {
-    .navbar {
-        padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-
-    .top-nav-collapse {
-        /* Customize the look and feel of the collapsed top nav here */
-        padding: 0;
-    }
-}
