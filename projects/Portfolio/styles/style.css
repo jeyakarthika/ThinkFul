@@ -85,7 +85,7 @@ a {
 
   header a:nth-child(2) {
     top: 0;
-    text-indent: -50px;
+    text-indent: -80px;
   }
 
   /* Hide Text - for image replacement */
