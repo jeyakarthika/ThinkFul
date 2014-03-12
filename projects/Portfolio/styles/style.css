@@ -84,8 +84,8 @@ a {
   }
 
   header a:nth-child(2) {
-    top: 0;
-    text-indent: -80px;
+    top: 2em;
+    text-indent: -55px;
   }
 
   /* Hide Text - for image replacement */
@@ -111,6 +111,15 @@ a {
   .logo {
       width: 80px;
       height: 80px;
+  }
+
+  /* Hire me */
+  .hire-text {
+    right: 1em;
+    background: url('../images/glyphicons/glyphicons_421_send.png') no-repeat;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
   }
 
   #home {
