@@ -8,55 +8,6 @@
 	Version: 0.1
 	
 ----------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------
-   http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
----------------------------------------------------------------------------------*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
 /*---------------------------------------------------------------------------------
    Common Styles
@@ -72,66 +23,40 @@ table {
     clear: both;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-  background-color: #f2f2f2;
-  overflow: hidden;
-}
-
-body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-}
-
 /*---------------------------------------------------------------------------------
    Mobile-First Styling
 ---------------------------------------------------------------------------------*/
 
-#home {
-	background-color: #ECA63F;
+/* Mobile First Styling */
+@media only screen and (min-width : 320px) {
+
+  /* html, body, sections and container styling */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  html {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    overflow: hidden;
+  }
+
+  body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
 }
 
-#work {
-	background-color: #FA6A5A;
-}
 
-#about {
-	background-color: #3E8F6C;
-}
 
-#contact {
-	background-color: #80D4F0;
-}
 
-.logo {
-  width: 40px;
-}
-
-.full {
-  background: url(../images/jeyakarthika.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.fixed-header {
-  width: 100%;
-  height: 70px;
-  position: absolute;
-  top: 0;
-  margin-top: 50px;
-  z-index: 10;
-}
 
 

@@ -15,55 +15,76 @@
 		<link rel="shortcut icon" href="images/favicon.ico">
 
 		<!-- Stylesheets -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="styles/bootstrap.min.css">
-		<link rel="stylesheet" href="styles/bootstrap-theme.css"/>
+		<link rel="stylesheet" href="styles/normalize.css"/>
+		<link rel="stylesheet" href="styles/style.css"/>
+
+		<!-- Fonts -->	
+		<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9:all.js"></script>
 
 		<!-- JavaScript -->
 		<!--[if lt IE 9]>
 		    <script src="function/html5shiv/html5shiv.js"></script>
 		<![endif]-->
-		<script type="text/javascript" src="function/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="function/bootstrap.min.js"></script>
+		<script type="text/javascript" src="function/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="function/action.js"></script>
 	
 	</head>
+
 	<body>
-		<div class="container-fluid">
+		<div class="container">
+
+			<!-- Header block to contain the menu icon, logo image and Hire me button -->
+			<header class="fixed-header">
 
 
 
-			<header class="">
+				<a class="logo" href="#home">Jeya Karthika</a>
 
-				<a href="#">Menu</a>
-
-				<nav>
-					<ul class= "">
-						<li><a href="#home">Home</a></li>
-						<li><a href="#work">Work</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="http://freshsqueaks.com/">Blog</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-
-				<a href="#home">
-					<img src="images/logo.png">
-				</a>
-
-				<a href="mailto:hello@jeyakarthika.com">Hire Me!</a>
+				<a class="hire-text" href="mailto:hello@jeyakarthika.com">Hire Me!</a>
 
 			</header>
-			<!-- home -->
-			<section id="home" class="container-fluid">
 
-				<img src="images/jeyakarthika.jpg" style="width:100%;" />
+
+
+
+
+			<!-- Slide in Sidebar with the navigation menu --> 
+
+			<nav>
+
+				<a class="icon-menu" href="#">Menu</a>
+				<ul class= "">
+					<li>
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#work">Work</a>
+					</li>
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="http://freshsqueaks.com/">Blog</a></li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+				
+			</nav>
+
+
+			<!-- home -->
+			<section id="home">
+
+				<!--<img src="images/jeyakarthika.jpg" style="width:100%;" />-->
 
 				<h2>Hello! I am Jeya Karthika. You can call me <span><img src="images/logo.png" style="width: 50px;"></span>.</h2>
 
 				<h3>I craft <span>colourful pixels</span> &amp; write clean <span>mark-up</span> for the web.</h3>
 
 			</section>
+
+
 			<!-- work -->
 			<section id="work">
 				<article>
@@ -111,6 +132,7 @@
 
 			</section>
 
+
 			<!-- about -->
 			<section id="about">
 				<h3>About Me!</h3>
@@ -124,10 +146,11 @@
 				<p>I am always interested in hearing about new challenges and would love to hear from you. Email <a href="mailto:hello@jeyakarthika.com">me</a> or just hit me up on <a href="http://twitter.com/ItsJkTweeting">twitter</a>.</p>
 			</section>
 
+
 			<!-- contact -->
 			<section id="contact">
 
-			</section>
+			</section>	
 		</div>
 	</body>
 </html>

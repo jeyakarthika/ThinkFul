@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-
 		<title>Jeya Karthika | Front-End Web Developer</title>
 
 		<!-- Meta Tags -->
@@ -15,48 +14,69 @@
 		<link rel="shortcut icon" href="images/favicon.ico">
 
 		<!-- Stylesheets -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/normalize.css"/>
 		<link rel="stylesheet" href="styles/style.css"/>
-		<link rel="stylesheet" href="styles/onepage-scroll.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/onepage-scroll.css">
+
+		<!-- Fonts -->	
+		<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9:all.js"></script>
 
 		<!-- JavaScript -->
 		<!--[if lt IE 9]>
 		    <script src="function/html5shiv/html5shiv.js"></script>
 		<![endif]-->
 		<script type="text/javascript" src="function/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="function/jquery.onepage-scroll.min.js"></script>
 		<script type="text/javascript" src="function/action.js"></script>
-	
+		<script type="text/javascript" src="function/jquery.onepage-scroll.min.js"></script>
 	</head>
 
 	<body>
-		<div class="main">
 
-			<!-- Header block to contain the menu icon, logo image and Hire me button -->
-			<header class="fixed-header">
+		<!-- Header block to contain the menu icon, logo image and Hire me button -->
+		<header class="fixed-header">
 
-				<a href="#">Menu</a>
+			<a class="icon-menu" href="#">
+				<span>Menu</span>
+			</a>
 
-				<a href="#home">
-					<img class="logo" src="images/logo.png">
+			<h1>
+				<a class="logo" href="#home">
+					<span>Jeya Karthika</span>
 				</a>
+			</h1>
 
-				<a href="mailto:hello@jeyakarthika.com">Hire Me!</a>
+			<a class="hire-text" href="mailto:hello@jeyakarthika.com">
+				<span>Hire Me!</span>
+			</a>
 
-			</header>
+		</header>
 
 
-			<!-- Slide in Sidebar with the navigation menu 
+		<!-- Slide in Sidebar with the navigation menu --> 
 
-			<nav>
-				<ul class= "">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="http://freshsqueaks.com/">Blog</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>-->
+		<nav>
+			
+			<ul class= "">
+				<li>
+					<a href="#home">Home</a>
+				</li>
+				<li>
+					<a href="#work">Work</a>
+				</li>
+				<li>
+					<a href="#about">About</a>
+				</li>
+				<li>
+					<a href="http://freshsqueaks.com/">Blog</a></li>
+				<li>
+					<a href="#contact">Contact</a>
+				</li>
+			</ul>
+			
+		</nav>
+
+		<!-- Main container div which is necessary to apply the onepage scroll -->
+		<div class="main">
 
 
 			<!-- home -->
@@ -136,7 +156,7 @@
 			<!-- contact -->
 			<section id="contact">
 
-			</section>	
+			</section>
 		</div>
 	</body>
 </html>
