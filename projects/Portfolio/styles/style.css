@@ -66,6 +66,7 @@ a {
     height: 10%;
     margin: 0 auto;
     text-align: center;
+    z-index: 10;
   }
 
   header a {
@@ -84,7 +85,7 @@ a {
 
   header a:nth-child(2) {
     top: 0;
-    padding: 0
+    text-indent: -50px;
   }
 
   /* Hide Text - for image replacement */
@@ -107,13 +108,26 @@ a {
   }
 
   /* Logo */
-
-
   .logo {
-      width: 50px;
-      height: 50px;
+      width: 80px;
+      height: 80px;
   }
 
+  #home {
+    background-color: #e95353;
+  }
+
+  #about {
+    background-color: #262626;
+  }
+
+  #work {
+    background-color: #29A6B2;
+  }
+
+  #contact {
+    background-color: #FFCA11;
+  }
 
 }
 
