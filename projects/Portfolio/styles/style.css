@@ -52,6 +52,44 @@
     font-family: 'Open Sans', sans-serif;
   }
 
+  /* fixed header */
+  .fixed-header {
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 10%;
+  }
+
+  header a {
+    position: relative;
+    top: 2em;
+    padding: 1em;
+  }
+
+  /* Hide Text - for image replacement */
+  .hide-text {
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+
+  /* Menu */
+  .icon-menu {
+      left: 2em;
+      background: url('../images/glyphicons/glyphicons_158_show_lines.png') no-repeat;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+  }
+
+  /* Logo */
+  .logo {
+      background: url('../images/logo.png') no-repeat;
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+  }
+
 
 }
 
