@@ -85,7 +85,10 @@ a {
 
   header a:nth-child(2) {
     top: 2em;
-    text-indent: -55px;
+    text-indent: -4.6em;
+    font-family: 'Grand Hotel', cursive;
+    font-style: normal;
+    font-size: 3em;
   }
 
   /* Hide Text - for image replacement */
@@ -122,8 +125,14 @@ a {
     height: 30px;
   }
 
-  #home {
-    background-color: #e95353;
+  /* Home Page */
+
+  .background-full {
+      background: #e95353 url('../images/intro-bg.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
   }
 
   #about {
