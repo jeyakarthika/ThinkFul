@@ -73,16 +73,16 @@ a {
   }
 
   header a:nth-child(1) {
-    right: 2em;
+    left: 2em;
   }
 
   header a:nth-child(3) {
-    right: 5em;
+    right: 2em;
   }
 
   header a:nth-child(2) {
     text-align: center;
-    left: 2em;
+    margin: 0 auto;
   }
 
   /* Hide Text - for image replacement */
@@ -107,8 +107,8 @@ a {
   /* Logo */
   .logo {
       display: inline-block;
-      width: 300px;
-      height: 300px;
+      width: 50px;
+      height: 50px;
   }
 
 
