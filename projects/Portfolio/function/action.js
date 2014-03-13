@@ -14,6 +14,11 @@ $(document).ready(function(){
 	//page slide to reveal modal navigation
 	$(".open").pageslide({modal: true }); 
 	
+	//full page sliders
+	$.fn.fullpage({
+				slidesColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['first', 'secondPage', '3rdPage', '4thpage', 'lastPage']
+			});
 
 	
 });
