@@ -1,0 +1,177 @@
+/*---------------------------------------------------------------------------------
+
+	Project Name: Portfolio
+	Project Description: A ThinkFul Portfolio Site
+	File Name: style.css
+	Author: Jeya Karthika
+	Author URI: http://www.freshsqueaks.com
+	Version: 0.1
+	
+----------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------
+   Common Styles
+---------------------------------------------------------------------------------*/
+/*float styles*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*---------------------------------------------------------------------------------
+   Mobile-First Styling
+---------------------------------------------------------------------------------*/
+
+/* Mobile First Styling */
+@media only screen and (min-width : 320px) {
+
+  /* html, body, sections and container styling */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    position: static;  
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .main {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+      padding: 0;
+  }
+
+  section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  /* fixed header */
+  .fixed-header {
+    position: fixed;
+    display: block;
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+    height: 11%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+  }
+
+  header a {
+    position: absolute;
+    top: 1em;
+    padding: 1em;
+  }
+
+  header a:nth-child(1) {
+    left: 1em;
+  }
+
+  header a:nth-child(3) {
+    right: 1em;
+  }
+
+  header a:nth-child(2) {
+    top: 0.5em;
+    text-indent: -4.6em;
+    font-family: 'Grand Hotel', cursive;
+    font-style: normal;
+    font-size: 4em;
+  }
+
+  /* Hide Text - for image replacement */
+  .hide-text {
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+
+  /* Menu */
+  .icon-menu {
+    left: 1em;
+    background: url('../images/glyphicons/glyphicons_158_show_lines.png') no-repeat;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+
+  .hide-menu {
+    display: none;
+  }
+
+  /* Logo */
+  .logo {
+      width: 80px;
+      height: 80px;
+  }
+
+  /* Hire me */
+  .hire-text {
+    right: 1em;
+    background: url('../images/glyphicons/glyphicons_421_send.png') no-repeat;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Home Page */
+
+  .background-full {
+      background: #e95353 url('../images/intro-bg.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
+
+  .home-text {
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 40%;
+    margin: auto auto;
+    vertical-align: middle;
+  }
+
+  #about {
+    background-color: #262626;
+  }
+
+  #work {
+    background-color: #29A6B2;
+  }
+
+  #contact {
+    background-color: #FFCA11;
+  }
+
+}
+
+
+
+
+
+
