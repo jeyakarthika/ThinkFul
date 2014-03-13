@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-
 		<title>Jeya Karthika | Front-End Web Developer</title>
 
 		<!-- Meta Tags -->
@@ -9,17 +8,17 @@
 		<meta name="description" content="This portfolio showcases all the Front-End Web Development projects completed by Jeya Karthika as part of her Course at ThinkFul."/>
 		<meta name="author" content="Jeya Karthika"/>
 		<meta name="keywords" content="Front-End Web Developer, Brisbane, ThinkFul Alumni, Web Design, Web Development, Design Inspiration, Web, CSS, CSS3, HTML, HMTL5, Responsive, Responsive design" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="images/favicon.ico">
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="styles/normalize.css"/>
 		<link rel="stylesheet" href="styles/style.css"/>
 
 		<!-- Fonts -->	
 		<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9:all.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
 
 		<!-- JavaScript -->
 		<!--[if lt IE 9]>
@@ -27,60 +26,54 @@
 		<![endif]-->
 		<script type="text/javascript" src="function/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="function/action.js"></script>
-	
 	</head>
 
 	<body>
-		<div class="container">
 
-			<!-- Header block to contain the menu icon, logo image and Hire me button -->
-			<header class="fixed-header">
+		<!-- Header block to contain the menu icon, logo image and Hire me button -->
+		<header class="fixed-header">
 
-
-
-				<a class="logo" href="#home">Jeya Karthika</a>
-
-				<a class="hire-text" href="mailto:hello@jeyakarthika.com">Hire Me!</a>
-
-			</header>
+			<a href="#">
+				<span class="icon-menu hide-text">Menu</span>
+			</a>
 
 
+			<a href="#home">
+				<!-- <img class="logo" src="images/logo.svg"> -->
+				<span>Jeya Karthika</span>
+			</a>
+
+			<a href="mailto:hello@jeyakarthika.com">
+				<span class="hire-text hide-text">Hire Me!</span>
+			</a>
+
+		</header>
 
 
+		<!-- Slide in Sidebar with the navigation menu --> 
 
-			<!-- Slide in Sidebar with the navigation menu --> 
+		<nav>
+			<a href="#home">Home</a>
+			<a href="#work">Work</a>
+			<a href="#about">About</a>
+			<a href="http://freshsqueaks.com/">Blog</a></li>
+			<a href="#contact">Contact</a>
+		</nav>
 
-			<nav>
-
-				<a class="icon-menu" href="#">Menu</a>
-				<ul class= "">
-					<li>
-						<a href="#home">Home</a>
-					</li>
-					<li>
-						<a href="#work">Work</a>
-					</li>
-					<li>
-						<a href="#about">About</a>
-					</li>
-					<li>
-						<a href="http://freshsqueaks.com/">Blog</a></li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
-				
-			</nav>
+		<!-- Main container div which is necessary to apply the onepage scroll -->
+		<div class="main">
 
 
 			<!-- home -->
-			<section id="home">
+			<section id="home" class= "background-full">
 
-				<!--<img src="images/jeyakarthika.jpg" style="width:100%;" />-->
+				<div class="home-text">
+					
+					<h2 class= "">Hello! I am Jeya Karthika. You can call me j.</h2>
 
-				<h2>Hello! I am Jeya Karthika. You can call me <span><img src="images/logo.png" style="width: 50px;"></span>.</h2>
+					<h3 class= "">I craft <span>colourful pixels</span> &amp; write clean <span>mark-up</span> for the web.</h3>
 
-				<h3>I craft <span>colourful pixels</span> &amp; write clean <span>mark-up</span> for the web.</h3>
+				</div>
 
 			</section>
 
@@ -150,7 +143,7 @@
 			<!-- contact -->
 			<section id="contact">
 
-			</section>	
+			</section>
 		</div>
 	</body>
 </html>
