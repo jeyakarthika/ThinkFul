@@ -12,11 +12,7 @@
 $(document).ready(function(){
 
 	//page slide to reveal modal navigation
-	$(".open").click(function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-		$(".open").pageslide({modal: true }); 
-	});
+	$(".open").pageslide({modal: true }); 
 	
 
 	
