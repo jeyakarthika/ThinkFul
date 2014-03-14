@@ -131,7 +131,11 @@ table {
       margin: -0.8em 0 -0.5em;
     }
 
-
+    .icon {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
     /*---------------------------------------------------------------------------------
        Header Styles
     ---------------------------------------------------------------------------------*/
@@ -172,8 +176,6 @@ table {
       font-style: normal;
       font-size: 200%;
     }
-
-
 
     /* Menu */
     .icon-menu {
@@ -238,7 +240,17 @@ table {
     /*---------------------------------------------------------------------------------
        Portfolio work Section Styles
     ---------------------------------------------------------------------------------*/
+    .project-container {
+      position: relative;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #fff;
+    }
 
+    img {
+      max-width: 100%;
+    }
 
 
     /*---------------------------------------------------------------------------------
@@ -291,11 +303,7 @@ table {
     }
 
     /* Social Media Icons */
-    .icon {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-    }
+
 
     .twitter {
       background: url('../images/icons/social/glyphicons_social_31_twitter.png') no-repeat;
