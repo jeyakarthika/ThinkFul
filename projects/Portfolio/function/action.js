@@ -12,12 +12,11 @@
 $(document).ready(function(){
 
 	//page slide to reveal modal navigation
-	$(".open").pageslide({modal: true }); 
+	$(".open").pageslide({direction: "left", modal: true}); 
 	
 	//full page sliders
 	$.fn.fullpage({
-				slidesColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-				anchors: ['first', 'secondPage', '3rdPage', '4thpage', 'lastPage']
+				slidesColor: ['#FECC00', '#07D3CD', '#FC575F', 'whitesmoke']
 			});
 
 	
