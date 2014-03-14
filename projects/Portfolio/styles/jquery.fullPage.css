@@ -65,13 +65,13 @@ html, body {
 .controlArrow.prev {
     left: 15px;
     width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    border-width: 12.5px 14px 12.5px 0;
+    border-color: transparent #000 transparent transparent;
 }
 .controlArrow.next {
     right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    border-width: 12.5px 0 12.5px 14px;
+    border-color: transparent transparent transparent #000;
 }
 .scrollable {
     overflow: scroll;
