@@ -116,6 +116,21 @@ table {
       font-family: 'Alice', 'Grand Hotel', 'Open Sans', sans-serif;
     }
 
+    /* Hide Text - for image replacement */
+    .hide-text {
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+
+    .dots {
+      font-family: 'Grand Hotel', cursive;
+      font-style: normal;
+      font-size: 300%;
+      text-align: center;
+      display: block;
+      margin: -0.8em 0 -0.5em;
+    }
+
 
     /*---------------------------------------------------------------------------------
        Header Styles
@@ -158,11 +173,7 @@ table {
       font-size: 200%;
     }
 
-    /* Hide Text - for image replacement */
-    .hide-text {
-      text-indent: -9999px;
-      overflow: hidden;
-    }
+
 
     /* Menu */
     .icon-menu {
@@ -256,6 +267,87 @@ table {
       font-weight: 400;
       font-style: italic;
     }
+
+    /*---------------------------------------------------------------------------------
+       Contact Section Styles
+    ---------------------------------------------------------------------------------*/
+    .contact-text { 
+      position: relative;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 200;
+      font-size: 100%;
+    }
+
+    .contact-text p {
+      line-height: 1.7em;
+      font-size: 80%;
+    }
+
+    .icon-container {
+      position: relative;
+      margin: 1em 0;
+    }
+
+    /* Social Media Icons */
+    .icon {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+
+    .twitter {
+      background: url('../images/icons/social/glyphicons_social_31_twitter.png') no-repeat;
+    }
+
+    .facebook {
+      background: url('../images/icons/social/glyphicons_social_30_facebook.png') no-repeat;
+    }
+
+    .linkedin {
+      background: url('../images/icons/social/glyphicons_social_17_linked_in.png') no-repeat;
+    }
+
+    .google-plus {
+      background: url('../images/icons/social/glyphicons_social_02_google_plus.png') no-repeat;
+    }
+
+    .pinterest {
+      background: url('../images/icons/social/glyphicons_social_00_pinterest.png') no-repeat;
+    }
+
+    .instagram {
+      background: url('../images/icons/social/glyphicons_social_32_instagram.png') no-repeat;
+    }
+
+    .flickr {
+      background: url('../images/icons/social/glyphicons_social_35_flickr.png') no-repeat;
+    }
+
+    .github {
+      background: url('../images/icons/social/glyphicons_social_21_github.png') no-repeat;
+    }
+
+    .skype {
+      background: url('../images/icons/social/glyphicons_social_38_skype.png') no-repeat;
+    }
+
+
+    /* footer */
+    p.footer {
+      bottom: 0;
+      margin: 0.5em auto;
+      padding: 0.5em 0;
+    }
+
+    p.footer span {
+      color: #e64c65;
+    }
+
+
+
+
 
 
 
