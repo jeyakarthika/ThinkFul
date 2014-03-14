@@ -112,6 +112,10 @@ table {
       font-size: 300%;
     }
 
+    .ampersand {
+      font-family: 'Alice', 'Grand Hotel', 'Open Sans', sans-serif;
+    }
+
 
     /*---------------------------------------------------------------------------------
        Header Styles
@@ -189,6 +193,7 @@ table {
       margin-left: auto;
       margin-right: auto;
     }
+
     .super-text {
       padding: 0.5em;
     }
@@ -218,6 +223,41 @@ table {
       font-weight: 400;
       font-style: italic;
     }
+
+    /*---------------------------------------------------------------------------------
+       Portfolio work Section Styles
+    ---------------------------------------------------------------------------------*/
+
+
+
+    /*---------------------------------------------------------------------------------
+       About Section Styles
+    ---------------------------------------------------------------------------------*/
+    
+    .about-text {
+      position: relative;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-text h1 {
+      padding-top: 0.5em;
+    }
+
+    .about-text p {
+      font-weight: 200;
+      font-size: 80%;
+      line-height: 1.7em;
+      text-align: justify;
+    }
+
+    .highlight {
+      font-weight: 400;
+      font-style: italic;
+    }
+
+
 
 }
 
