@@ -60,108 +60,177 @@ table {
 }
 
 /*---------------------------------------------------------------------------------
-   Common Styles
+   Mobile-First Styles
 ---------------------------------------------------------------------------------*/
-/*float styles*/
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+@media only screen and (min-width : 320px) {
+
+    /*---------------------------------------------------------------------------------
+       Common Styles
+    ---------------------------------------------------------------------------------*/
+    /*float styles*/
+    .clearfix:before,
+    .clearfix:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100%;
+      height: 100%;
+      background-color: #f2f2f2;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 100%;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    h1 {
+      font-family: 'Grand Hotel', cursive;
+      font-style: normal;
+      font-size: 300%;
+    }
+
+
+    /*---------------------------------------------------------------------------------
+       Header Styles
+    ---------------------------------------------------------------------------------*/
+
+    /* fixed header */
+    .fixed-header {
+      position: fixed;
+      display: block;
+      top: 0;
+      width: 100%;
+      height: 11%;
+      margin: 0 auto;
+      text-align: center;
+      z-index: 10;
+    }
+
+    header a {
+      position: relative;
+      top: 0.5em;
+      padding: 0.5em;
+    }
+
+    header a:nth-child(1) {
+      right: 0.5em;
+      float: right;
+    }
+
+    header a:nth-child(3) {
+      right: 0.5em;
+      float: right;
+    }
+
+    header a:nth-child(2) {
+      top: 0;
+      padding: 0.3em 0.5em;
+      float: left;
+      font-family: 'Grand Hotel', cursive;
+      font-style: normal;
+      font-size: 200%;
+    }
+
+    /* Hide Text - for image replacement */
+    .hide-text {
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+
+    /* Menu */
+    .icon-menu {
+      top: 0.5em;
+      left: 0.5em;
+      background: url('../images/icons/glyphicons_158_show_lines.png') no-repeat 0 3px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+
+
+    /* Hire me */
+    .hire-text {
+      right: 0.5em;
+      background: url('../images/icons/glyphicons_421_send.png') no-repeat;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+
+    /*---------------------------------------------------------------------------------
+       Home Section Styles
+    ---------------------------------------------------------------------------------*/
+    .home-text {
+      position: relative;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .super-text {
+      padding: 0.5em;
+    }
+
+    hr {
+      height:1px; 
+      border:none; 
+      color:#000; 
+      background-color:#000;
+      width:20%; 
+      text-align:center; 
+      margin: 0 auto;
+    }
+
+    .home-text p {
+      font-weight: 200;
+    }
+
+    .home-text h2 {
+      font-weight: 200;
+      font-size: 90%;
+      padding: 1em;
+      line-height: 1.4em;
+    }
+
+    .home-text h2 span {
+      font-weight: 300;
+      font-style: italic;
+    }
+
 }
 
-.clearfix:after {
-    clear: both;
-}
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-html {
-  width: 100%;
-  height: 100%;
-  background-color: #f2f2f2;
-  overflow: hidden;
-}
 
-body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-}
 
-a {
-  text-decoration: none;
-  color: #000;
-}
 
-/* fixed header */
-.fixed-header {
-  position: fixed;
-  display: block;
-  background-color: #fff;
-  top: 0;
-  width: 100%;
-  height: 11%;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 10;
-}
 
-header a {
-  position: relative;
-  top: 0.5em;
-  padding: 0.5em;
-}
 
-header a:nth-child(1) {
-  left: 0.5em;
-  float: left;
-}
 
-header a:nth-child(3) {
-  right: 0.5em;
-  float: right;
-}
 
-header a:nth-child(2) {
-  top: 0.3em;
-  font-family: 'Grand Hotel', cursive;
-  font-style: normal;
-  font-size: 2em;
-}
 
-/* Hide Text - for image replacement */
-.hide-text {
-  text-indent: -9999px;
-  overflow: hidden;
-}
 
-/* Menu */
-.icon-menu {
-  top: 1em;
-  left: 0.5em;
-  background: url('../images/icons/glyphicons_158_show_lines.png') no-repeat;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-}
 
-/* Logo */
-.logo {
-    width: 80px;
-    height: 80px;
-}
 
-/* Hire me */
-.hire-text {
-  right: 0.5em;
-  background: url('../images/icons/glyphicons_421_send.png') no-repeat;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-}
