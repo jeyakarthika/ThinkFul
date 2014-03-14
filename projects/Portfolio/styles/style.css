@@ -247,8 +247,24 @@ table {
       margin-right: auto;
     }
 
+    .project-container p {
+      padding-top: 0.5em;
+      font-weight: 200;
+      font-size: 80%;
+      line-height: 1.7em;
+      text-align: justify;
+    }
+
     img {
-      max-width: 60%;
+      max-width: 80%;
+    }
+
+    .code {
+      background: url('../images/icons/glyphicons_118_embed_close.png') no-repeat;
+    }    
+
+    .link {
+      background: url('../images/icons/glyphicons_050_link.png') no-repeat;
     }
 
 
@@ -299,6 +315,7 @@ table {
     .icon-container {
       position: relative;
       margin: 1em 0;
+      display: block;
     }
 
     /* Social Media Icons */
