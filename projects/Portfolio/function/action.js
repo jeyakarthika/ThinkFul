@@ -16,7 +16,7 @@ $(document).ready(function(){
 	
 	//full page sliders
 	$.fn.fullpage({
-				slidesColor: ['#FECC00', '#2C2D31', '#FC575F', '#33C1C9']
+				slidesColor: ['#FECC00', '#D3C67B', '#FC575F', '#33C1C9']
 			});
 
 	
