@@ -198,15 +198,20 @@ table {
     }
 
     /*---------------------------------------------------------------------------------
-       Header Styles
+       Navigation Styles
     ---------------------------------------------------------------------------------*/
-
+    nav {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+    }
     nav a {
       display: block;
       width: 100%;
       height: 20%;
-      border: #272822 solid 1px;
-      padding: 1.95em;
+      border-top: #272822 solid 1px;
+      padding: 1.98em;
     }
 
     nav a span {
@@ -217,6 +222,7 @@ table {
 
     nav a:hover {
       background-color: #272822;
+      font-style: italic;
     }
 
     /*---------------------------------------------------------------------------------
@@ -395,13 +401,91 @@ table {
 }
 
 /*---------------------------------------------------------------------------------
-       Tablet Section Styles
+       Tablet Styles
 ---------------------------------------------------------------------------------*/
 
 @media only screen and (min-width : 768px) {
 
+
+
 }
 
+/*---------------------------------------------------------------------------------
+       Desktop Styles
+---------------------------------------------------------------------------------*/
+
+@media only screen and (min-width : 1140px) {
+    
+    /* Common styles */
+    h1 {
+      font-size: 500%;
+    }
+
+    .dots {
+      font-size: 500%;
+      margin: -0.8em 0 -0.5em;
+    }
+
+
+    /* Navigation Styles */
+    nav a {
+      padding: 3.5em;
+    }
+
+
+    /* Header styles */
+    header a {
+      top: 1em;
+      padding: 1em;
+    }
+
+    header a:nth-child(1) {
+      right: 1em;
+      float: right;
+    }
+
+    header a:nth-child(3) {
+      right: 1em;
+      float: right;
+    }
+
+    header a:nth-child(2) {
+      padding: 0.5em 1em;
+      font-style: normal;
+      font-size: 250%;
+    }
+
+    /* Home Section Styles */
+    .home-text {
+      position: relative;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .super-text {
+      padding: 0.5em;
+    }
+
+    .home-text p {
+      font-weight: 200;
+      font-size: 220%;
+    }
+
+    .home-text h2 {
+      font-weight: 200;
+      font-size: 150%;
+      padding: 1em;
+      line-height: 1.4em;
+    }
+
+    .home-text h2 span {
+      font-weight: 400;
+      font-style: italic;
+    }
+
+
+}
 
 
 
