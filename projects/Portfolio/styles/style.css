@@ -198,6 +198,24 @@ table {
     }
 
     /*---------------------------------------------------------------------------------
+       Header Styles
+    ---------------------------------------------------------------------------------*/
+
+    nav a {
+      display: block;
+      width: 100%;
+      height: 20%;
+      background-color: green;
+      border: black solid 1px;
+    }
+
+    nav a span {
+      font-weight: 200;
+      font-size: 200%;
+      padding: 1em;
+    }
+
+    /*---------------------------------------------------------------------------------
        Home Section Styles
     ---------------------------------------------------------------------------------*/
     .home-text {
@@ -261,6 +279,7 @@ table {
 
     .code {
       background: url('../images/icons/glyphicons_118_embed_close.png') no-repeat;
+      margin-right: 1em;
     }    
 
     .link {
