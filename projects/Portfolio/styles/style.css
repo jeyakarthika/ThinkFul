@@ -62,7 +62,7 @@ table {
 /*---------------------------------------------------------------------------------
    Mobile-First Styles
 ---------------------------------------------------------------------------------*/
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : 300px) {
 
     /*---------------------------------------------------------------------------------
        Common Styles
@@ -284,7 +284,7 @@ table {
     }
 
     img {
-      max-width: 80%;
+      max-width: 300px;
     }
 
     .code {
@@ -501,6 +501,66 @@ table {
 }
 
 /*---------------------------------------------------------------------------------
+       img Styles to resolve the cross-browser positioning issues.
+---------------------------------------------------------------------------------*/
+
+@media only screen and (min-width : 300px) {
+
+    img {
+      max-width: 200px;
+    }
+
+}
+
+@media only screen and (min-width : 400px) {
+
+    img {
+      max-width: 300px;
+    }
+
+}
+
+@media only screen and (min-width : 500px) {
+
+    img {
+      max-width: 400px;
+    }
+
+}
+
+@media only screen and (min-width : 600px) {
+
+    img {
+      max-width: 500px;
+    }
+
+}
+
+@media only screen and (min-width : 700px) {
+
+    img {
+      max-width: 600px;
+    }
+
+}
+
+@media only screen and (min-width : 800px) {
+
+    img {
+      max-width: 700px;
+    }
+
+}
+
+@media only screen and (min-width : 900px) {
+
+    img {
+      max-width: 800px;
+    }
+
+}
+
+/*---------------------------------------------------------------------------------
        Desktop Styles
 ---------------------------------------------------------------------------------*/
 
@@ -514,6 +574,10 @@ table {
     /* Portfolio styles */
     .project-container h1 {
       padding-top: 1em;
+    }
+
+    img {
+      max-width: 1024px;
     }
 
     .code {
