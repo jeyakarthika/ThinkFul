@@ -13,12 +13,17 @@ $(document).ready(function(){
 
 	//page slide to reveal modal navigation
 	$(".open").pageslide({direction: "left", modal: true}); 
+
+	//To auto close the navigation on selecting a menu item
+	$('nav a').click(function() {
+		$.pageslide.close();
+	});	
 	
 	//full page sliders
 	$.fn.fullpage({
-				slidesColor: ['#FECC00', '#B6965C', '#FC575F', '#33C1C9'],
-				slidesNavigation: true
-			});
+		slidesColor: ['#FECC00', '#B6965C', '#FC575F', '#33C1C9'],
+		slidesNavigation: true
+	});
 
 	
 });
