@@ -205,14 +205,18 @@ table {
       display: block;
       width: 100%;
       height: 20%;
-      background-color: green;
-      border: black solid 1px;
+      border: #272822 solid 1px;
+      padding: 1.9em;
     }
 
     nav a span {
       font-weight: 200;
       font-size: 200%;
-      padding: 1em;
+      color: #FFA292
+    }
+
+    nav a:hover {
+      background-color: #272822;
     }
 
     /*---------------------------------------------------------------------------------
