@@ -210,7 +210,7 @@ table {
       display: block;
       width: 100%;
       height: 20%;
-      border-top: #272822 solid 1px;
+      border-bottom: #272822 solid 1px;
       padding: 1.98em;
     }
 
@@ -316,7 +316,6 @@ table {
       font-weight: 200;
       font-size: 80%;
       line-height: 1.7em;
-      text-align: justify;
     }
 
     .highlight {
@@ -398,6 +397,10 @@ table {
       color: #e64c65;
     }
 
+    p.footer a {
+      font-weight: 400;
+    }
+
 }
 
 /*---------------------------------------------------------------------------------
@@ -406,16 +409,6 @@ table {
 
 @media only screen and (min-width : 768px) {
 
-
-
-}
-
-/*---------------------------------------------------------------------------------
-       Desktop Styles
----------------------------------------------------------------------------------*/
-
-@media only screen and (min-width : 1140px) {
-    
     /* Common styles */
     h1 {
       font-size: 500%;
@@ -423,7 +416,6 @@ table {
 
     .dots {
       font-size: 500%;
-      margin: -0.8em 0 -0.5em;
     }
 
 
@@ -441,47 +433,96 @@ table {
 
     header a:nth-child(1) {
       right: 1em;
-      float: right;
     }
 
     header a:nth-child(3) {
       right: 1em;
-      float: right;
     }
 
     header a:nth-child(2) {
       padding: 0.5em 1em;
-      font-style: normal;
       font-size: 250%;
     }
 
-    /* Home Section Styles */
-    .home-text {
-      position: relative;
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .super-text {
-      padding: 0.5em;
-    }
-
+    /* Home styles */
     .home-text p {
       font-weight: 200;
       font-size: 220%;
     }
 
     .home-text h2 {
-      font-weight: 200;
       font-size: 150%;
-      padding: 1em;
-      line-height: 1.4em;
     }
 
-    .home-text h2 span {
-      font-weight: 400;
-      font-style: italic;
+    /* Portfolio styles */
+    .project-container {
+      width: 80%;
+    }
+
+    .project-container p {
+      padding-top: 1em;
+      text-align: center;
+      font-size: 110%;
+    }
+
+    .code {
+      margin-right: 2em;
+    }
+
+    /* About styles */
+
+    .about-text p {
+      padding-top: 1em;
+      font-size: 130%;
+    }
+
+    /* Contact Styles */
+    .contact-text { 
+      width: 85%;
+    }
+
+    .contact-text p {
+      padding-top: 1em;
+      font-size: 130%;
+    }
+
+    .icon-container {
+      margin: 2em 0;
+    }
+
+    /* footer */
+    p.footer {
+      margin: 0;
+      padding: 1em 0 0;
+      font-size: 100%;
+    }
+
+
+}
+
+/*---------------------------------------------------------------------------------
+       Desktop Styles
+---------------------------------------------------------------------------------*/
+
+@media only screen and (min-width : 1140px) {
+    
+    /* About styles */
+    .about-text {
+      width: 65%;
+    }
+
+    /* Portfolio styles */
+    .project-container h1 {
+      padding-top: 1em;
+    }
+
+    .code {
+      margin-right: 3em;
+    }
+
+    /* Contact Styles */
+    .contact-text { 
+      width: 55%;
     }
 
 
