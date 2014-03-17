@@ -21,6 +21,7 @@ $(document).ready(function(){
 	
 	//full page sliders
 	$.fn.fullpage({
+		resize : false,
 		slidesColor: ['#FECC00', '#B6965C', '#FC575F', '#33C1C9'],
 		slidesNavigation: true
 	});
