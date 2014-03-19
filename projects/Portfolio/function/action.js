@@ -17,7 +17,14 @@ $(document).ready(function(){
 	//To auto close the navigation on selecting a menu item
 	$('nav a').click(function() {
 		$.pageslide.close();
-	});	
+	});
+
+	$('nav a').on('click', function() {
+	    var target = $(this).attr('href');
+	    console.log(target);
+	    $('html, body').animate({scrollTop:$(target).offset().top}, 2000);
+	});
+
 	
 	//full page sliders
 	$.fn.fullpage({
